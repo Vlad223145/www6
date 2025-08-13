@@ -1251,7 +1251,7 @@ export default function Index() {
       {/* Pricing Section */}
       <section className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
-          <div className="flex flex-col gap-6 text-center">
+          <div className="flex flex-col gap-6 text-center mt-px">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center">
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent transform-none">
                 JOIN THE WAY THAT
