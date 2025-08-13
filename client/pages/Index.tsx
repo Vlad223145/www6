@@ -1755,12 +1755,6 @@ export default function Index() {
             <div className="flex items-center flex-wrap justify-between gap-6">
               <div className="flex items-center gap-10">
                 <div className="flex items-center gap-3 transform-none">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685165e99ecee091e25ac9fe_flowcub.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full"
-                  />
                   <div className="text-sm leading-5 max-w-[170px] uppercase">
                     <span>DESIGN & Developed by </span>
                     <a
