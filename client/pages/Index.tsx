@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Index() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -6,7 +6,7 @@ export default function Index() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -34,31 +34,31 @@ export default function Index() {
             <nav className="relative">
               <div className="flex gap-6 -ml-12">
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={() => scrollToSection("about")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   About
                 </button>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection("services")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Services
                 </button>
                 <button
-                  onClick={() => scrollToSection('pricing')}
+                  onClick={() => scrollToSection("pricing")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Pricing
                 </button>
                 <button
-                  onClick={() => scrollToSection('testimonials')}
+                  onClick={() => scrollToSection("testimonials")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Testimonials
                 </button>
                 <button
-                  onClick={() => scrollToSection('faq')}
+                  onClick={() => scrollToSection("faq")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   FAQ
@@ -71,8 +71,7 @@ export default function Index() {
               <a
                 href="#pricing"
                 className="flex items-center text-white font-bold text-sm uppercase"
-              >
-              </a>
+              ></a>
 
               {/* Mobile Menu Button */}
               <div className="hidden cursor-pointer">
@@ -1306,8 +1305,7 @@ export default function Index() {
               <div className="relative">
                 <div className="grid grid-cols-3 gap-5">
                   {/* Starter Plan - Removed */}
-                  <div className="pb-1.5 px-0 py-0 relative transform-none">
-                  </div>
+                  <div className="pb-1.5 px-0 py-0 relative transform-none"></div>
 
                   {/* Progress Plan */}
                   <div className="pb-1.5 px-0 py-0 relative transform-none">
@@ -1386,8 +1384,7 @@ export default function Index() {
                   </div>
 
                   {/* Commit Plan - Removed */}
-                  <div className="pb-1.5 px-0 py-0 relative transform-none">
-                  </div>
+                  <div className="pb-1.5 px-0 py-0 relative transform-none"></div>
                 </div>
               </div>
             </div>
@@ -1505,7 +1502,9 @@ export default function Index() {
           </div>
 
           <div className="flex flex-col gap-5 max-w-[810px] mx-auto mt-15">
-            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 0 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 0 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
               <button
                 onClick={() => toggleFAQ(0)}
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
@@ -1515,23 +1514,27 @@ export default function Index() {
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
-                    {openFAQ === 0 ? '−' : '+'}
+                    {openFAQ === 0 ? "−" : "+"}
                   </span>
                 </div>
               </button>
               {openFAQ === 0 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    Absolutely! We welcome all fitness levels. Our expert trainers will
-                    guide you step-by-step at your own pace. We'll start with a comprehensive
-                    fitness assessment to understand your current level and create a personalized
-                    plan that's perfect for beginners — no pressure, no judgment, just support.
+                    Absolutely! We welcome all fitness levels. Our expert
+                    trainers will guide you step-by-step at your own pace. We'll
+                    start with a comprehensive fitness assessment to understand
+                    your current level and create a personalized plan that's
+                    perfect for beginners — no pressure, no judgment, just
+                    support.
                   </p>
                 </div>
               )}
             </div>
 
-            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 1 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 1 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
               <button
                 onClick={() => toggleFAQ(1)}
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
@@ -1541,23 +1544,26 @@ export default function Index() {
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
-                    {openFAQ === 1 ? '−' : '+'}
+                    {openFAQ === 1 ? "−" : "+"}
                   </span>
                 </div>
               </button>
               {openFAQ === 1 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    Just bring comfortable workout clothes, athletic shoes, and a water bottle.
-                    We provide all the equipment you'll need including towels, mats, and weights.
-                    For your first intro session, we'll also provide a complimentary fitness
+                    Just bring comfortable workout clothes, athletic shoes, and
+                    a water bottle. We provide all the equipment you'll need
+                    including towels, mats, and weights. For your first intro
+                    session, we'll also provide a complimentary fitness
                     assessment and goal-setting consultation.
                   </p>
                 </div>
               )}
             </div>
 
-            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 2 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 2 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
               <button
                 onClick={() => toggleFAQ(2)}
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
@@ -1567,23 +1573,26 @@ export default function Index() {
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
-                    {openFAQ === 2 ? '−' : '+'}
+                    {openFAQ === 2 ? "−" : "+"}
                   </span>
                 </div>
               </button>
               {openFAQ === 2 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    Yes! Our Progress Membership includes 2 personal training sessions every month,
-                    while our Commit Membership includes 4 sessions monthly. Each session is
-                    tailored to your specific goals and fitness level, ensuring maximum results
-                    and proper form guidance from our certified trainers.
+                    Yes! Our Progress Membership includes 2 personal training
+                    sessions every month, while our Commit Membership includes 4
+                    sessions monthly. Each session is tailored to your specific
+                    goals and fitness level, ensuring maximum results and proper
+                    form guidance from our certified trainers.
                   </p>
                 </div>
               )}
             </div>
 
-            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 3 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 3 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
               <button
                 onClick={() => toggleFAQ(3)}
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
@@ -1593,23 +1602,26 @@ export default function Index() {
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
-                    {openFAQ === 3 ? '−' : '+'}
+                    {openFAQ === 3 ? "−" : "+"}
                   </span>
                 </div>
               </button>
               {openFAQ === 3 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    We offer a variety of classes including Strength & Conditioning,
-                    Yoga & Flexibility, HIIT workouts, functional training, and nutrition
-                    workshops. All classes are designed for different fitness levels and
-                    are led by certified instructors who provide modifications for every participant.
+                    We offer a variety of classes including Strength &
+                    Conditioning, Yoga & Flexibility, HIIT workouts, functional
+                    training, and nutrition workshops. All classes are designed
+                    for different fitness levels and are led by certified
+                    instructors who provide modifications for every participant.
                   </p>
                 </div>
               )}
             </div>
 
-            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 4 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 4 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
               <button
                 onClick={() => toggleFAQ(4)}
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
@@ -1619,22 +1631,26 @@ export default function Index() {
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
-                    {openFAQ === 4 ? '−' : '+'}
+                    {openFAQ === 4 ? "−" : "+"}
                   </span>
                 </div>
               </button>
               {openFAQ === 4 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    Yes, we understand life happens! You can freeze your membership for up to
-                    3 months per year for valid reasons like travel, injury, or family circumstances.
-                    Simply give us 7 days notice and we'll pause your membership without any fees.
+                    Yes, we understand life happens! You can freeze your
+                    membership for up to 3 months per year for valid reasons
+                    like travel, injury, or family circumstances. Simply give us
+                    7 days notice and we'll pause your membership without any
+                    fees.
                   </p>
                 </div>
               )}
             </div>
 
-            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 5 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 5 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
               <button
                 onClick={() => toggleFAQ(5)}
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
@@ -1644,17 +1660,18 @@ export default function Index() {
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
-                    {openFAQ === 5 ? '−' : '+'}
+                    {openFAQ === 5 ? "−" : "+"}
                   </span>
                 </div>
               </button>
               {openFAQ === 5 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    You can cancel your membership anytime with 30 days written notice.
-                    We don't believe in binding contracts or cancellation fees. Simply speak
-                    with our front desk staff or send us an email, and we'll process your
-                    cancellation request promptly and hassle-free.
+                    You can cancel your membership anytime with 30 days written
+                    notice. We don't believe in binding contracts or
+                    cancellation fees. Simply speak with our front desk staff or
+                    send us an email, and we'll process your cancellation
+                    request promptly and hassle-free.
                   </p>
                 </div>
               )}
@@ -1668,8 +1685,7 @@ export default function Index() {
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="grid grid-cols-2 gap-x-12.5">
             <div>
-              <div className="flex flex-col gap-4">
-              </div>
+              <div className="flex flex-col gap-4"></div>
             </div>
 
             <div>
@@ -1747,13 +1763,11 @@ export default function Index() {
                     <a
                       target="_blank"
                       href="https://play.google.com/store/games"
-                    >
-                    </a>
+                    ></a>
                     <a
                       target="_blank"
                       href="https://www.apple.com/in/app-store/"
-                    >
-                    </a>
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -1791,8 +1805,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="justify-self-center transform-none">
-                <div>
-                </div>
+                <div></div>
               </div>
               <div className="transform-none">
                 <div className="flex items-center justify-end">
