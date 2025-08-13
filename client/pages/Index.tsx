@@ -369,7 +369,7 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white/5 py-20">
+      <section id="services" className="bg-white/5 py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="grid grid-cols-3 gap-x-16 gap-y-10 items-start">
             {/* Services Content */}
