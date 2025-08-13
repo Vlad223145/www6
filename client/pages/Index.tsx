@@ -1313,7 +1313,9 @@ export default function Index() {
                           PROGRESS MEMBERSHIP
                         </div>
                         <div className="text-[48px] font-bold leading-[43.2px]">
-                          <span>$649.99</span>
+                          <span>
+                            <p>$0.00</p>
+                          </span>
                           <span className="inline text-sm leading-5">
                             / 3 MONTH
                           </span>
