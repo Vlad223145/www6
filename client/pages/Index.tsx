@@ -1,4 +1,19 @@
+import { useState } from 'react';
+
 export default function Index() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
   return (
     <div className="min-h-screen bg-black">
       {/* Header Section */}
