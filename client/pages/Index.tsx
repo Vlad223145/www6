@@ -613,7 +613,7 @@ export default function Index() {
                     PROGRESS TRACKING
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
-                    We track what matters — so you can see how far you've come,
+                    We track what matters �� so you can see how far you've come,
                     and where you're headed next.
                   </p>
                 </div>
@@ -1271,20 +1271,13 @@ export default function Index() {
 
           <div className="mt-15 relative">
             {/* Pricing Tabs */}
-            <div className="flex items-center justify-center mb-15 relative transform-none">
+            <div className="flex items-center justify-center mb-15 relative transform-none mt-[19px]">
               <a
                 role="tab"
                 href="#monthly"
                 className="bg-white text-black rounded-full px-6 py-3 font-bold text-sm relative"
               >
-                <div className="text-black font-bold text-sm">PAY MONTHLY</div>
-              </a>
-              <a
-                role="tab"
-                href="#yearly"
-                className="bg-white/5 rounded-full px-6 py-3 font-bold text-sm relative"
-              >
-                <div className="font-bold text-sm">PAY YEARLY</div>
+                <p>TRY</p>
               </a>
             </div>
 
