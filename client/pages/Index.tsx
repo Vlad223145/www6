@@ -1563,20 +1563,30 @@ export default function Index() {
               )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
+            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 1 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+              <button
+                onClick={() => toggleFAQ(1)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   Do I need to bring anything for my first session?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 1 ? '−' : '+'}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 1 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Just bring comfortable workout clothes, athletic shoes, and a water bottle.
+                    We provide all the equipment you'll need including towels, mats, and weights.
+                    For your first intro session, we'll also provide a complimentary fitness
+                    assessment and goal-setting consultation.
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
