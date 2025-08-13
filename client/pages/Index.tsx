@@ -1523,7 +1523,7 @@ export default function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section id="faq" className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col gap-6 text-center">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center">
