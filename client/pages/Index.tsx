@@ -972,7 +972,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     01
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1012,7 +1012,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Book a Free Intro Session
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1027,7 +1027,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     02
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1067,7 +1067,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Get a Personal Fitness Check
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1082,7 +1082,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     03
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1122,7 +1122,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Start with a Plan Made for You
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1138,7 +1138,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 justify-self-end transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     04
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1178,7 +1178,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Train with the Right Support
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1193,7 +1193,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 justify-self-start transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     05
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1233,7 +1233,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Track Progress & Stay Consistent
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
