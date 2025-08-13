@@ -1638,17 +1638,14 @@ export default function Index() {
                 <div className="flex flex-col gap-10 h-full px-10 py-10">
                   <h2 className="text-[48px] font-black leading-[43.2px]">
                     <span className="text-[48px] font-black leading-[43.2px]">
-                      DOWNLOAD OUR
+                      <p>START NOW!</p>
                     </span>
                     <span className="inline text-[48px] leading-[43.2px]">
-                      HAYPERFIT APP
+                      <p>
+                        <br />
+                      </p>
                     </span>
                   </h2>
-                  <p className="text-white/80 text-lg leading-[22.5px]">
-                    Stay connected to your fitness journey — anytime, anywhere.
-                    Our app brings convenience, clarity, and control right to
-                    your fingertips.
-                  </p>
                   <div className="flex flex-col gap-5">
                     <div className="flex items-center gap-2 tracking-wide">
                       <img
