@@ -1537,26 +1537,30 @@ export default function Index() {
           </div>
 
           <div className="flex flex-col gap-5 max-w-[810px] mx-auto mt-15">
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
+            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 0 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+              <button
+                onClick={() => toggleFAQ(0)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   I'm a complete beginner. Can I still join Hyperfit?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 0 ? '−' : '+'}
+                  </span>
                 </div>
-              </div>
-              <div className="hidden min-w-full pb-8 px-8 text-left">
-                <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                  Absolutely. We welcome all fitness levels. Our trainers will
-                  guide you at your own pace — no pressure, no judgment.
-                </p>
-              </div>
+              </button>
+              {openFAQ === 0 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Absolutely! We welcome all fitness levels. Our expert trainers will
+                    guide you step-by-step at your own pace. We'll start with a comprehensive
+                    fitness assessment to understand your current level and create a personalized
+                    plan that's perfect for beginners — no pressure, no judgment, just support.
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
