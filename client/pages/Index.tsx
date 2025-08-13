@@ -1719,30 +1719,6 @@ export default function Index() {
               </div>
               <div className="justify-self-center transform-none">
                 <div>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    CHANGE LOG
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    LICENSE
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    STYLE GUIDE
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    404
-                  </a>
                 </div>
               </div>
               <div className="transform-none">
