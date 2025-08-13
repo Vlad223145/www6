@@ -926,7 +926,7 @@ export default function Index() {
                       SIMPLE, HUMAN EXPERIENCE
                     </div>
                     <p className="text-white/80 text-sm leading-5">
-                      Clean layouts and intuitive flows that feel natural �� not
+                      Clean layouts and intuitive flows that feel natural — not
                       overwhelming.
                     </p>
                   </div>
@@ -1615,20 +1615,30 @@ export default function Index() {
               )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
+            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 3 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+              <button
+                onClick={() => toggleFAQ(3)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   What kind of group classes do you offer?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 3 ? '−' : '+'}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 3 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    We offer a variety of classes including Strength & Conditioning,
+                    Yoga & Flexibility, HIIT workouts, functional training, and nutrition
+                    workshops. All classes are designed for different fitness levels and
+                    are led by certified instructors who provide modifications for every participant.
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
