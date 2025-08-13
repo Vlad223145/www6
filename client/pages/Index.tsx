@@ -1675,23 +1675,11 @@ export default function Index() {
                       target="_blank"
                       href="https://play.google.com/store/games"
                     >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508dee9bf67ff29689bf_play-store.svg"
-                        loading="lazy"
-                        alt=""
-                        className="inline-block max-w-full"
-                      />
                     </a>
                     <a
                       target="_blank"
                       href="https://www.apple.com/in/app-store/"
                     >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508d48475812036b4a00_app-store.svg"
-                        loading="lazy"
-                        alt=""
-                        className="inline-block max-w-full"
-                      />
                     </a>
                   </div>
                 </div>
