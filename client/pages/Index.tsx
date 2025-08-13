@@ -55,36 +55,36 @@ export default function Index() {
             {/* Navigation Menu */}
             <nav className="relative">
               <div className="flex gap-6">
-                <a
-                  href="#about"
+                <button
+                  onClick={() => scrollToSection('about')}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   About
-                </a>
-                <a
-                  href="#services"
+                </button>
+                <button
+                  onClick={() => scrollToSection('services')}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Services
-                </a>
-                <a
-                  href="#pricing"
+                </button>
+                <button
+                  onClick={() => scrollToSection('pricing')}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Pricing
-                </a>
-                <a
-                  href="#testimonials"
+                </button>
+                <button
+                  onClick={() => scrollToSection('testimonials')}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Testimonials
-                </a>
-                <a
-                  href="#faq"
+                </button>
+                <button
+                  onClick={() => scrollToSection('faq')}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   FAQ
-                </a>
+                </button>
               </div>
             </nav>
 
