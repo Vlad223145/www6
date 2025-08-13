@@ -744,31 +744,10 @@ export default function Index() {
                     className="hidden absolute -bottom-[50px] -left-[55px] -right-[30%] h-[145px] max-w-full opacity-0 rounded-xl filter blur-[3px]"
                   />
                 </div>
-                <p className="hidden text-lg leading-[22.5px] max-w-[330px]">
+                <p className="text-lg leading-[22.5px] max-w-[330px]">
                   Empowering women through strength and movement. 6+ years of
                   experience.
                 </p>
-                <div className="flex flex-col items-start gap-3">
-                  <div className="text-2xl font-black leading-[30px]">
-                    ANJALI SINGH
-                  </div>
-                  <div className="text-white/80 text-sm leading-5">
-                    Strength & Functional Coach
-                  </div>
-                  <a
-                    href="#"
-                    className="hidden items-center bg-white/10 rounded-full px-4 py-2 text-lg font-medium gap-2 max-w-full"
-                  >
-                    <div className="text-lg font-medium leading-[21.6px]">
-                      Buy Me a Coffee
-                    </div>
-                    <img
-                      src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684fc8ad759937913da41e88_buy-me-a-coffee-icon.svg"
-                      alt=""
-                      className="inline-block max-w-full"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
 
