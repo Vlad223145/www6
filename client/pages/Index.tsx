@@ -1428,7 +1428,7 @@ export default function Index() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-white/5 py-20">
+      <section id="testimonials" className="bg-white/5 py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col gap-6 text-center">
             <div className="text-white font-bold text-sm leading-5 text-center uppercase transform-none">
