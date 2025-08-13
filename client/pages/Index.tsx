@@ -1691,7 +1691,7 @@ export default function Index() {
                     loading="lazy"
                     height="590"
                     alt=""
-                    className="absolute bottom-0 h-[590px] max-w-full right-10 text-right"
+                    className="absolute bottom-0 h-[590px] max-w-full right-10 text-right -mt-px pt-[79px]"
                   />
                 </div>
               </div>
