@@ -1407,10 +1407,10 @@ export default function Index() {
                             src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
                             loading="lazy"
                             alt="User Image"
-                            className="h-[55px] max-w-full text-left w-[55px]"
+                            className="h-[55px] max-w-full text-left w-[55px] -mt-[68px]"
                           />
                           <div className="flex flex-col gap-1 text-left">
-                            <div className="text-2xl font-bold leading-[30px] text-left">
+                            <div className="text-2xl font-bold leading-[30px] text-left -mt-[62px]">
                               Deepa khan
                             </div>
                             <div className="text-white/80 text-sm leading-5 text-left">
@@ -1418,18 +1418,7 @@ export default function Index() {
                             </div>
                           </div>
                         </div>
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098b597b924b96a875bf_shape.svg"
-                          loading="lazy"
-                          alt=""
-                          className="mb-6 mt-10 max-w-full text-left"
-                        />
-                        <p className="text-white/80 text-lg leading-[22.5px] max-w-[320px] text-left">
-                          When I joined, I was nervous. But the trainers never
-                          made me feel behind or out of place. They understood
-                          my goals and gave me the space to grow.
-                        </p>
-                        <div className="flex items-center gap-1 mt-12.5 text-left">
+                        <div className="flex items-center gap-1 mt-[17px] text-left">
                           <img
                             src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
                             loading="lazy"
