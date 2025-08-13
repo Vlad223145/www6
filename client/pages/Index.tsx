@@ -20,7 +20,7 @@ export default function Index() {
       <header className="bg-black fixed top-0 w-full z-[1000]">
         {/* Main Navigation */}
         <div className="max-w-[1320px] mx-auto px-5">
-          <div className="flex items-center justify-between py-6">
+          <div className="flex items-center justify-between py-6 -ml-1">
             {/* Logo */}
             <a href="#home" className="relative">
               <img
@@ -32,7 +32,7 @@ export default function Index() {
 
             {/* Navigation Menu */}
             <nav className="relative">
-              <div className="flex gap-6">
+              <div className="flex gap-6 -ml-12">
                 <button
                   onClick={() => scrollToSection('about')}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
