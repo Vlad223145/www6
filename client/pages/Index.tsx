@@ -1641,36 +1641,55 @@ export default function Index() {
               )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
+            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 4 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+              <button
+                onClick={() => toggleFAQ(4)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   Can I freeze or pause my membership if needed?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 4 ? '−' : '+'}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 4 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Yes, we understand life happens! You can freeze your membership for up to
+                    3 months per year for valid reasons like travel, injury, or family circumstances.
+                    Simply give us 7 days notice and we'll pause your membership without any fees.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
+            <div className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 5 ? 'h-auto' : 'h-[90px] overflow-hidden'}`}>
+              <button
+                onClick={() => toggleFAQ(5)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   How do I cancel my membership?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 5 ? '−' : '+'}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 5 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    You can cancel your membership anytime with 30 days written notice.
+                    We don't believe in binding contracts or cancellation fees. Simply speak
+                    with our front desk staff or send us an email, and we'll process your
+                    cancellation request promptly and hassle-free.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
