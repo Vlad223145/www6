@@ -1767,12 +1767,6 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3 transform-none">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685165e93203fefeb003e7f7_webflow.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full"
-                  />
                   <div className="text-sm leading-5 max-w-[170px] uppercase">
                     <span>Powered BY </span>
                     <a
