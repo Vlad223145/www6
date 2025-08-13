@@ -72,16 +72,6 @@ export default function Index() {
                 href="#pricing"
                 className="flex items-center text-white font-bold text-sm uppercase"
               >
-                <div className="bg-white text-black rounded-full px-7 py-3.5 font-bold uppercase">
-                  Buy Template
-                </div>
-                <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center ml-0">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                    alt=""
-                    className="max-w-full"
-                  />
-                </div>
               </a>
 
               {/* Mobile Menu Button */}
