@@ -1292,7 +1292,7 @@ export default function Index() {
                   {/* Progress Plan */}
                   <div className="pb-1.5 px-0 py-0 relative transform-none">
                     <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl h-full absolute left-0 top-0 w-full z-0"></div>
-                    <div className="bg-black rounded-2xl flex flex-col gap-8 overflow-hidden px-7 py-11 relative z-[1]">
+                    <div className="bg-[#0e0d0d] rounded-2xl flex flex-col gap-8 overflow-hidden px-7 py-11 relative z-[1] text-white">
                       <div className="relative">
                         <div
                           className="bg-[#0f0f0f] rounded-xl h-full absolute origin-bottom-center w-full"
