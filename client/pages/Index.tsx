@@ -613,7 +613,7 @@ export default function Index() {
                     PROGRESS TRACKING
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
-                    We track what matters �� so you can see how far you've come,
+                    We track what matters — so you can see how far you've come,
                     and where you're headed next.
                   </p>
                 </div>
@@ -1285,74 +1285,8 @@ export default function Index() {
               {/* Monthly Plans */}
               <div className="relative">
                 <div className="grid grid-cols-3 gap-5">
-                  {/* Starter Plan */}
+                  {/* Starter Plan - Removed */}
                   <div className="pb-1.5 px-0 py-0 relative transform-none">
-                    <div className="bg-white/5 rounded-2xl flex flex-col gap-8 px-7 py-11">
-                      <div className="relative">
-                        <div
-                          className="bg-[#191919] rounded-xl h-full absolute origin-bottom-center w-full"
-                          style={{
-                            transform: "matrix(0.87, 0, 0, 0.87, 0, 0)",
-                          }}
-                        ></div>
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685010182c0cfa0af49afab5_plan-card1.svg"
-                          loading="lazy"
-                          alt=""
-                          className="rounded-xl inline-block max-w-full relative w-full z-[1]"
-                          style={{ transform: "matrix(1, 0, 0, 1, 0, -16)" }}
-                        />
-                      </div>
-                      <div className="flex flex-col gap-6">
-                        <div className="text-xs font-bold tracking-wider leading-[15px] uppercase">
-                          STARTER MEMBERSHIP
-                        </div>
-                        <div className="text-[48px] font-bold leading-[43.2px]">
-                          <span>$244.99</span>
-                          <span className="inline text-sm leading-5">
-                            / MONTH
-                          </span>
-                        </div>
-                        <div className="text-white/80 text-sm leading-5 max-w-[250px]">
-                          For beginners or anyone who wants to keep it flexible.
-                        </div>
-                      </div>
-                      <a
-                        href="#contact"
-                        className="flex items-center font-bold text-sm uppercase"
-                      >
-                        <div className="bg-white/10 rounded-full px-7 py-3.5 font-bold uppercase text-center w-full">
-                          <div className="font-bold text-sm uppercase text-center">
-                            BOOK A MEMBERSHIP
-                          </div>
-                        </div>
-                        <div className="bg-white/10 rounded-full w-12 h-12 flex items-center justify-center">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full filter invert"
-                          />
-                        </div>
-                      </a>
-                      <div className="flex flex-col items-start gap-4.5 relative">
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Unlimited gym access
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Group fitness classes
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          1 personal training session/month
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          No long-term commitment
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Flexible schedule — come in anytime
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Progress Plan */}
