@@ -381,14 +381,7 @@ export default function Index() {
                     className="flex items-center text-white font-bold text-sm uppercase"
                   >
                     <div className="bg-white text-black rounded-full px-7 py-3.5 font-bold uppercase">
-                      <p>Try now</p>
-                    </div>
-                    <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                        alt=""
-                        className="max-w-full"
-                      />
+                      Try now
                     </div>
                   </a>
                 </div>
