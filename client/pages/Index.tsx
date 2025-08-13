@@ -1487,7 +1487,7 @@ export default function Index() {
           <div className="flex flex-col gap-5 max-w-[810px] mx-auto mt-15">
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
               <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
                   I'm a complete beginner. Can I still join Hyperfit?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
@@ -1509,7 +1509,7 @@ export default function Index() {
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
               <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
                   Do I need to bring anything for my first session?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
@@ -1525,7 +1525,7 @@ export default function Index() {
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
               <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
                   Are personal training sessions included in the plans?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
@@ -1541,7 +1541,7 @@ export default function Index() {
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
               <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
                   What kind of group classes do you offer?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
@@ -1557,7 +1557,7 @@ export default function Index() {
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
               <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
                   Can I freeze or pause my membership if needed?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
@@ -1573,7 +1573,7 @@ export default function Index() {
 
             <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
               <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none text-white">
                   How do I cancel my membership?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
