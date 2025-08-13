@@ -1868,44 +1868,6 @@ export default function Index() {
               {/* Green dot animation placeholder */}
             </div>
           </div>
-          <a
-            target="_blank"
-            href="https://flowcub.com/webflow-templates/"
-            className="flex items-center bg-white rounded-2xl shadow-lg text-black font-medium gap-3 absolute left-0 max-w-[363px] min-h-[77px] px-3.5 py-3.5 right-0 top-0 transition-duration-800 w-full z-[9991] transform-none"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6864c21b34f35289ee768539_webflow.svg"
-              loading="lazy"
-              alt="Logo"
-              className="font-medium h-[46px] max-w-full"
-            />
-            <div className="font-medium">
-              <div className="font-medium">
-                Explore&nbsp;our premium templates
-              </div>
-              <div className="text-blue-600 font-medium mt-1 underline">
-                Premium Webflow Templates
-              </div>
-            </div>
-          </a>
-          <a
-            target="_blank"
-            href="https://flowcub.com/help-center/"
-            className="flex items-center bg-white rounded-2xl shadow-lg text-black font-medium gap-3 absolute left-0 max-w-[363px] min-h-[77px] opacity-40 px-3.5 py-3.5 right-0 top-0 transition-duration-800 w-full z-[9990] transform-scale-90 translate-y-3"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6864c21b34f35289ee76853a_flowcub.svg"
-              loading="lazy"
-              alt="Logo"
-              className="font-medium h-[46px] max-w-full"
-            />
-            <div className="font-medium">
-              <div className="font-medium">Need to customize this template</div>
-              <div className="text-blue-600 font-medium mt-1 underline">
-                Hire our Webflow team!
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
