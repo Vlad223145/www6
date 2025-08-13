@@ -1301,7 +1301,7 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section id="pricing" className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col gap-6 text-center mt-px">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center">
