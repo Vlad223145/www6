@@ -18,28 +18,6 @@ export default function Index() {
     <div className="min-h-screen bg-black">
       {/* Header Section */}
       <header className="bg-black fixed top-0 w-full z-[1000]">
-        {/* Top Contact Bar */}
-        <div className="bg-gradient-to-r from-orange-500 to-red-500 py-2.5">
-          <div className="max-w-[1320px] mx-auto px-5">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4 text-white">
-                <div className="font-medium text-sm">CONTACT@HYPERFIT.COM</div>
-                <div className="font-medium text-sm">/</div>
-                <div className="font-medium text-sm">(123) 456 - 7890</div>
-              </div>
-              <div className="flex items-center gap-4 text-white">
-                <div className="font-medium text-sm">
-                  MONDAY - FRIDAY [ 7 AM - 10 PM ]
-                </div>
-                <div className="font-medium text-sm">/</div>
-                <div className="font-medium text-sm">
-                  SATURDAY - SUNDAY [ 7 AM - 9 AM ]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Main Navigation */}
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex items-center justify-between py-6">
