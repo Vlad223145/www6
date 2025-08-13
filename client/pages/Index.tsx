@@ -946,6 +946,43 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Recipes Section */}
+      <section className="py-20">
+        <div className="max-w-[1320px] mx-auto px-5">
+          <div className="flex flex-col items-center gap-10">
+            <h2 className="text-[48px] font-black leading-[43.2px] text-center text-white">
+              200+ RECIPES OF THE MOST DELICIOUS DISHES FOR WEIGHT LOSS
+            </h2>
+
+            <div className="flex items-center justify-center gap-8 flex-wrap">
+              <div className="flex flex-col items-center gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faa57fa3495ed440bb8d5e43633a5eae3%2Fa33d2c274fd54437bc4b524246da78df?format=webp&width=800"
+                  alt="Delicious pancakes with berries"
+                  className="w-[200px] h-[200px] rounded-full object-cover"
+                />
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faa57fa3495ed440bb8d5e43633a5eae3%2Fcee6e50756d841758d154773895ee2e7?format=webp&width=800"
+                  alt="Fresh healthy salad"
+                  className="w-[200px] h-[200px] rounded-full object-cover"
+                />
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faa57fa3495ed440bb8d5e43633a5eae3%2F92858630486c4aa5834867ecec309fae?format=webp&width=800"
+                  alt="Nutritious noodle bowl"
+                  className="w-[200px] h-[200px] rounded-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
