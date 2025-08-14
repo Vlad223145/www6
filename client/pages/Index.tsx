@@ -133,8 +133,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-10 max-w-[530px]">
-              <div className="flex items-center gap-4 blur-0 transform-none filter mt-[76px] pb-[82px]">
-              </div>
+              <div className="flex items-center gap-4 blur-0 transform-none filter mt-[76px] pb-[82px]"></div>
             </div>
           </div>
         </div>
@@ -148,12 +147,24 @@ export default function Index() {
       {/* Ticker Section */}
       <section className="bg-white/5 py-6 overflow-hidden">
         <div className="ticker-content whitespace-nowrap">
-          <span className="text-white font-black text-6xl tracking-wider">TRY 2 MONTHS FOR </span>
-          <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
-          <span className="text-white font-black text-6xl tracking-wider mx-20">TRY 2 MONTHS FOR </span>
-          <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
-          <span className="text-white font-black text-6xl tracking-wider mx-20">TRY 2 MONTHS FOR </span>
-          <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
+          <span className="text-white font-black text-6xl tracking-wider">
+            TRY 2 MONTHS FOR{" "}
+          </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">
+            FREE
+          </span>
+          <span className="text-white font-black text-6xl tracking-wider mx-20">
+            TRY 2 MONTHS FOR{" "}
+          </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">
+            FREE
+          </span>
+          <span className="text-white font-black text-6xl tracking-wider mx-20">
+            TRY 2 MONTHS FOR{" "}
+          </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">
+            FREE
+          </span>
         </div>
       </section>
 
