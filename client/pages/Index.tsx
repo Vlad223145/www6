@@ -145,14 +145,8 @@ export default function Index() {
         <div className="absolute top-0 left-0 w-1/4 h-0 bg-black z-[9999]"></div>
       </section>
 
-      {/* Floating Ticker Section */}
-      <section className="bg-white/5 py-6">
-        <div className="max-w-[1320px] mx-auto px-5">
-        </div>
-      </section>
-
-      {/* Floating Ticker Text */}
-      <div className="fixed top-1/3 left-0 w-full overflow-hidden z-50 pointer-events-none">
+      {/* Ticker Section */}
+      <section className="bg-white/5 py-6 overflow-hidden">
         <div className="ticker-content whitespace-nowrap">
           <span className="text-white font-black text-6xl tracking-wider">TRY 2 MONTHS FOR </span>
           <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
@@ -161,7 +155,7 @@ export default function Index() {
           <span className="text-white font-black text-6xl tracking-wider mx-20">TRY 2 MONTHS FOR </span>
           <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
         </div>
-      </div>
+      </section>
 
       {/* About Section */}
       <section id="about" className="py-20">
