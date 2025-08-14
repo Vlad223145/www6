@@ -134,14 +134,6 @@ export default function Index() {
             </div>
             <div className="flex flex-col items-center gap-10 max-w-[530px]">
               <div className="flex items-center gap-4 blur-0 transform-none filter mt-[76px] pb-[82px]">
-                <img
-                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72db401e83a5d3ef9ec_currency-exchange.svg"
-                  alt=""
-                  className="max-w-full"
-                />
-                <div className="text-white font-bold text-sm leading-5 uppercase">
-                  AFFORDABLE TRAINING & EATING PLANS
-                </div>
               </div>
             </div>
           </div>
@@ -153,48 +145,23 @@ export default function Index() {
         <div className="absolute top-0 left-0 w-1/4 h-0 bg-black z-[9999]"></div>
       </section>
 
-      {/* Company Logos Section */}
+      {/* Floating Ticker Section */}
       <section className="bg-white/5 py-6">
         <div className="max-w-[1320px] mx-auto px-5">
-          <div className="flex items-center gap-10">
-            <div className="text-white/60 text-sm font-bold leading-5 uppercase transform-none">
-              TRUSTED BY ENTERPRISE LEADERS:
-            </div>
-            <div className="flex items-center justify-between gap-10 transform-none">
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d84cb6e53807362a4_company-logo1.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72dbabc055895c9381a_company-logo2.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9bd684ae7087bd1a_company-logo3.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d2abe9be22f409b5d_company-logo4.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d38d2509308830465_company-logo5.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d22a4724e97e3150a_company-logo6.svg"
-                alt=""
-                className="max-w-full"
-              />
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* Floating Ticker Text */}
+      <div className="fixed top-1/3 left-0 w-full overflow-hidden z-50 pointer-events-none">
+        <div className="ticker-content whitespace-nowrap">
+          <span className="text-white font-black text-6xl tracking-wider">TRY 2 MONTHS FOR </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
+          <span className="text-white font-black text-6xl tracking-wider mx-20">TRY 2 MONTHS FOR </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
+          <span className="text-white font-black text-6xl tracking-wider mx-20">TRY 2 MONTHS FOR </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">FREE</span>
+        </div>
+      </div>
 
       {/* About Section */}
       <section id="about" className="py-20">
@@ -893,7 +860,7 @@ export default function Index() {
                       SIMPLE, HUMAN EXPERIENCE
                     </div>
                     <p className="text-white/80 text-sm leading-5">
-                      Clean layouts and intuitive flows that feel natural — not
+                      Clean layouts and intuitive flows that feel natural �� not
                       overwhelming.
                     </p>
                   </div>
