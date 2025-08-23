@@ -569,8 +569,8 @@ export default function Index() {
                     PROGRESS TRACKING
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
-                    We track what matters — so you can see how far you've come,
-                    and where you're headed next.
+                    Complete progress tracking with video tutorials and personal
+                    support. All included FREE in your 2-month trial.
                   </p>
                 </div>
                 <div className="flex items-end justify-center text-right w-[48%]">
@@ -772,9 +772,9 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 max-w-[509px] mx-auto text-center transform-none">
-              Hyperfit isn't just another gym template. It's designed for real
-              people, real journeys - with everything built around ease,
-              clarity, and community.
+              Start your FREE 2-month journey today. Get complete access to training,
+              nutrition plans, video lessons, recipes, and personal support.
+              No contracts, no hidden fees - just results.
             </p>
             <div className="flex items-center flex-wrap justify-center gap-3 mt-2 text-center transform-none">
               <a
@@ -782,7 +782,7 @@ export default function Index() {
                 className="flex items-center text-white font-bold text-sm uppercase text-center"
               >
                 <div className="border-2 border-white rounded-full px-7 py-3.5 font-bold uppercase text-center">
-                  WATCH VIDEO
+                  WATCH FREE PREVIEW
                 </div>
                 <div className="border-2 border-white rounded-full w-12 h-12 flex items-center justify-center">
                   <img
@@ -907,8 +907,12 @@ export default function Index() {
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col items-center gap-10">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center text-white">
-              200+ RECIPES OF THE MOST DELICIOUS DISHES FOR WEIGHT LOSS
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">200+ FREE RECIPES</span> OF THE MOST DELICIOUS DISHES FOR WEIGHT LOSS
             </h2>
+            <p className="text-white/80 text-lg leading-6 max-w-[600px] mx-auto text-center">
+              Access our complete recipe library FREE for 2 months - healthy, delicious meals
+              with step-by-step video tutorials and nutritional guidance.
+            </p>
 
             <div className="flex items-center justify-center gap-8 flex-wrap">
               <div className="flex flex-col items-center gap-4">
