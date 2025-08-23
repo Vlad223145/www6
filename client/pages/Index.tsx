@@ -182,10 +182,9 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 max-w-[500px] mx-auto text-center transform-none">
-              We're more than just a gym. We're a space built for every kind of
-              journey — whether you're just starting or looking to push your
-              limits. Here, it's not about perfection. It's about progress, your
-              way.
+              Experience our complete fitness ecosystem FREE for 2 months. Get personal
+              training, nutrition guidance, 200+ healthy recipes, video workouts, and
+              dedicated support. Transform your journey with everything included — your way.
             </p>
           </div>
 
