@@ -118,8 +118,9 @@ export default function Index() {
                 </h1>
               </div>
               <p className="text-white/80 text-sm leading-5 max-w-[360px] blur-0 transform-none filter">
-                Just simple, effective workouts tailored to your goals — guided
-                by real people who care.
+                Get 2 months absolutely FREE - complete training programs, nutrition
+                plans, healthy recipes, video lessons, and personal support. Everything
+                you need to transform your fitness journey.
               </p>
               <div className="flex items-center flex-wrap gap-3 blur-0 transform-none filter">
                 <a
@@ -326,8 +327,9 @@ export default function Index() {
                   </span>
                 </h2>
                 <p className="text-white/80 text-sm leading-5 max-w-[360px] transform-none">
-                  From personal training to nutrition and recovery — we cover
-                  what your body truly needs.
+                  Experience our complete fitness ecosystem FREE for 2 months:
+                  personal training, nutrition guidance, healthy recipes, video
+                  workouts, and dedicated support — everything included.
                 </p>
                 <div className="flex items-center flex-wrap gap-3 mt-2 transform-none">
                   <a
@@ -352,7 +354,7 @@ export default function Index() {
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
                     One-on-one coaching, fully focused on your goals, fitness
-                    level, and progress.
+                    level, and progress. Included FREE in your 2-month trial.
                   </p>
                 </div>
                 <div className="flex items-end justify-center text-right w-[48%]">
@@ -405,8 +407,8 @@ export default function Index() {
                     NUTRITION GUIDANCE
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
-                    Simple, practical food advice that works in real life. No
-                    extremes, just balance.
+                    Complete nutrition plans with healthy recipes and meal guides.
+                    Everything you need for balanced eating - FREE for 2 months.
                   </p>
                 </div>
                 <div className="flex items-end justify-center text-right w-[48%]">
