@@ -192,7 +192,7 @@ export default function Index() {
               training, nutrition guidance, 200+ healthy recipes, video workouts, and
               dedicated support. No gym needed - everything delivered digitally to transform your journey.
             </p>
-            <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl p-6 max-w-[400px] mx-auto mt-8">
+            <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl p-6 max-w-[400px] mx-auto mt-12">
               <div className="text-center">
                 <div className="text-white font-bold text-lg mb-2">After FREE Trial</div>
                 <div className="text-3xl font-black text-white mb-1">
@@ -204,7 +204,7 @@ export default function Index() {
           </div>
 
           {/* Stats Bar */}
-          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[850px] mx-auto my-15 transform-none">
+          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[850px] mx-auto mt-[85px] transform-none">
             <div className="flex items-center gap-4">
               <img
                 src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d903f201509ea6d4b_about-icon1.svg"
