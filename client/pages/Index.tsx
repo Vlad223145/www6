@@ -1876,76 +1876,142 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Newsletter/App Download Section */}
-      <section className="pt-35 pb-20">
+      {/* What You Get After Free Trial Section */}
+      <section className="py-20 bg-white/5">
         <div className="max-w-[1320px] mx-auto px-5">
-          <div
-            className="rounded-2xl transform-none"
-            style={{
-              backgroundImage:
-                'url("https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508e2d51a6ccda834d54_newsletter-background.webp")',
-              backgroundPosition: "50% 50%",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="grid grid-cols-2 gap-10">
-              <div className="flex-col gap-10">
-                <div className="flex flex-col gap-10 h-full px-10 py-10">
-                  <h2 className="text-[48px] font-black leading-[43.2px]">
-                    <span className="text-[48px] font-black leading-[43.2px]">
-                      <p>START NOW!</p>
-                    </span>
-                    <span className="inline text-[48px] leading-[43.2px]">
-                      <p>
-                        <br />
-                      </p>
-                    </span>
-                  </h2>
-                  <div className="flex flex-col gap-5">
-                    <div className="flex items-center gap-2 tracking-wide">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
-                        loading="lazy"
-                        alt=""
-                        className="tracking-wide max-w-full"
-                      />
-                      <div className="text-sm font-medium tracking-wide leading-5">
-                        View class schedules instantly
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 tracking-wide">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
-                        loading="lazy"
-                        alt=""
-                        className="tracking-wide max-w-full"
-                      />
-                      <div className="text-sm font-medium tracking-wide leading-5">
-                        Manage your membership easily
-                      </div>
-                    </div>
+          <div className="text-center mb-15">
+            <h2 className="text-[48px] font-black leading-[43.2px] text-center mb-6">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                ACTIVATE YOUR FREE
+              </span>
+              <span className="text-white font-black">
+                2-MONTH TRIAL TODAY
+              </span>
+            </h2>
+            <p className="text-white/80 text-lg leading-6 max-w-[600px] mx-auto">
+              Everything you need to transform your fitness journey is waiting for you.
+              Start immediately with full access to our complete online platform.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-white mb-6">What You Get Instantly:</h3>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Personal Training Sessions</div>
+                    <div className="text-white/80 text-sm">One-on-one video coaching sessions customized to your fitness level and goals</div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <a
-                      target="_blank"
-                      href="https://play.google.com/store/games"
-                    ></a>
-                    <a
-                      target="_blank"
-                      href="https://www.apple.com/in/app-store/"
-                    ></a>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Complete Nutrition Program</div>
+                    <div className="text-white/80 text-sm">200+ healthy recipes, meal plans, and personalized nutrition guidance</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Video Workout Library</div>
+                    <div className="text-white/80 text-sm">Hundreds of exercise videos for strength, cardio, yoga, and flexibility training</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Progress Tracking Tools</div>
+                    <div className="text-white/80 text-sm">Monitor your improvements with detailed analytics and achievement milestones</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">24/7 Support Access</div>
+                    <div className="text-white/80 text-sm">Get help whenever you need it through our online support system</div>
                   </div>
                 </div>
               </div>
-              <div className="flex-col gap-10">
-                <div className="h-full pr-10 relative text-right">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508fced1885ded303e8e_download-app-image-p-500.webp"
-                    loading="lazy"
-                    height="590"
-                    alt=""
-                    className="absolute bottom-0 h-[590px] max-w-full right-10 text-right -mt-px pt-[79px]"
-                  />
+            </div>
+
+            <div className="bg-black/30 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+
+              <div className="space-y-6">
+                <div>
+                  <div className="text-white font-bold text-lg mb-2">Primary Contact</div>
+                  <a
+                    href="mailto:support@hyperfit.com"
+                    className="text-orange-500 hover:text-orange-400 text-lg font-medium"
+                  >
+                    support@hyperfit.com
+                  </a>
+                  <div className="text-white/60 text-sm mt-1">For all questions and technical support</div>
+                </div>
+
+                <div>
+                  <div className="text-white font-bold text-lg mb-2">Business Hours</div>
+                  <div className="space-y-2 text-white/80">
+                    <div className="flex justify-between">
+                      <span>Monday - Friday:</span>
+                      <span>6:00 AM - 10:00 PM EST</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Saturday:</span>
+                      <span>8:00 AM - 8:00 PM EST</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday:</span>
+                      <span>10:00 AM - 6:00 PM EST</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-white/10 pt-6">
+                  <div className="text-white font-bold text-lg mb-2">Response Time</div>
+                  <div className="text-white/80 text-sm">
+                    During business hours: Within 2 hours<br/>
+                    Outside business hours: Next business day<br/>
+                    Emergency support: Always available
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl p-4 mt-6">
+                  <div className="text-center">
+                    <div className="text-white font-bold text-lg mb-2">After 2 FREE Months</div>
+                    <div className="text-3xl font-black text-white">
+                      <span className="text-green-500">$15</span>
+                      <span className="text-white text-lg">/month</span>
+                    </div>
+                    <div className="text-white/80 text-sm mt-1">Continue your transformation journey</div>
+                  </div>
                 </div>
               </div>
             </div>
