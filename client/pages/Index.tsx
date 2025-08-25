@@ -63,6 +63,12 @@ export default function Index() {
                 >
                   FAQ
                 </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
+                >
+                  Contact
+                </button>
               </div>
             </nav>
 
@@ -182,10 +188,19 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 max-w-[500px] mx-auto text-center transform-none">
-              Experience our complete fitness ecosystem FREE for 2 months. Get personal
+              Experience our complete ONLINE fitness ecosystem FREE for 2 months. Get personal
               training, nutrition guidance, 200+ healthy recipes, video workouts, and
-              dedicated support. Transform your journey with everything included — your way.
+              dedicated support. No gym needed - everything delivered digitally to transform your journey.
             </p>
+            <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl p-6 max-w-[400px] mx-auto mt-8">
+              <div className="text-center">
+                <div className="text-white font-bold text-lg mb-2">After FREE Trial</div>
+                <div className="text-3xl font-black text-white mb-1">
+                  <span className="text-green-500">$15</span>/month
+                </div>
+                <div className="text-white/60 text-sm">Full access to everything • Cancel anytime</div>
+              </div>
+            </div>
           </div>
 
           {/* Stats Bar */}
@@ -1385,80 +1400,147 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 text-center transform-none">
-              Just a place where you can grow - your way.
+              Real results from real people who transformed their lives with our online fitness platform.
             </p>
           </div>
 
-          <div className="max-w-[830px] mx-auto mt-15 transform-none">
-            <div className="relative text-center">
-              <div className="h-full left-0 overflow-hidden relative right-0 text-center whitespace-nowrap z-[1]">
-                <div className="inline-block h-full mr-5 relative text-left align-top w-full transform-none">
-                  <div className="grid grid-cols-2 gap-0 text-left">
-                    <div className="text-left">
-                      <div className="flex flex-col items-start bg-white/5 bg-[radial-gradient(circle_at_0px_0px,_rgba(32,175,54,0.1),_rgba(0,0,0,0))] rounded-t-2xl rounded-bl-2xl h-full justify-center px-8 py-8 text-left">
-                        <div className="flex items-center gap-3 text-left">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
-                            loading="lazy"
-                            alt="User Image"
-                            className="h-[55px] max-w-full text-left w-[55px] -mt-[68px]"
-                          />
-                          <div className="flex flex-col gap-1 text-left">
-                            <div className="text-2xl font-bold leading-[30px] text-left -mt-[62px]">
-                              Deepa khan
-                            </div>
-                            <div className="text-white/80 text-sm leading-5 text-left">
-                              May 29, 2024
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-1 mt-[17px] text-left">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098b6818536c0cb6b73a_star-light.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-left">
-                      <div className="rounded-r-2xl h-full overflow-hidden text-left">
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098d3c1f0322d26d4040_user-large-image1.webp"
-                          loading="lazy"
-                          alt="User Image"
-                          className="inline-block h-[415px] max-w-full object-cover text-left w-full"
-                        />
-                      </div>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-15">
+            {/* Testimonial 1 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Sarah M."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Sarah M.</div>
+                  <div className="text-white/60 text-sm">Lost 25 lbs in 3 months</div>
                 </div>
               </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "The online platform is amazing! I never thought I could get such personalized training from home. The recipes are delicious and the video tutorials made everything so easy to follow."
+              </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Mike T."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Mike T.</div>
+                  <div className="text-white/60 text-sm">Gained 15 lbs muscle</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "Best $15/month I spend! The personal coaching calls and custom workout plans helped me build more muscle than I ever did at traditional gyms. Everything online but feels so personal."
+              </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Emma L."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Emma L.</div>
+                  <div className="text-white/60 text-sm">Transformed lifestyle</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "As a busy mom, having everything online was perfect. The 2-month free trial convinced me - now I can't imagine life without my daily workouts and healthy recipes. Worth every penny!"
+              </p>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="James R."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">James R.</div>
+                  <div className="text-white/60 text-sm">Beginner to athlete</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "Started as a complete beginner. The support team guided me through every step. 6 months later, I'm in the best shape of my life. The online format actually works better for me than any gym."
+              </p>
+            </div>
+
+            {/* Testimonial 5 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Lisa K."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Lisa K.</div>
+                  <div className="text-white/60 text-sm">Improved health</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "The nutrition guidance and recipes changed my relationship with food. Having everything accessible online means I never miss a workout. The community support is incredible too!"
+              </p>
+            </div>
+
+            {/* Testimonial 6 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="David P."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">David P.</div>
+                  <div className="text-white/60 text-sm">Consistent results</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "Tried many fitness programs before. This online platform finally gave me the structure and accountability I needed. The progress tracking keeps me motivated every day."
+              </p>
             </div>
           </div>
         </div>
