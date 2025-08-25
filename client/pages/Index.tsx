@@ -1740,30 +1740,112 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section id="contact" className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
-          <div className="grid grid-cols-2 gap-x-12.5">
-            <div>
-              <div className="flex flex-col gap-4"></div>
-            </div>
+          <div className="flex flex-col gap-6 text-center mb-15">
+            <h2 className="text-[48px] font-black leading-[43.2px] text-center">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent transform-none">
+                READY TO START
+              </span>
+              <span className="text-white font-black transform-none">
+                YOUR TRANSFORMATION?
+              </span>
+            </h2>
+            <p className="text-white/80 text-lg leading-6 max-w-[600px] mx-auto text-center">
+              Join thousands who transformed their lives with our online fitness platform.
+              Everything you need is delivered digitally - no gym required.
+            </p>
+          </div>
 
-            <div>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-4">
-                  <div className="text-white/80 text-sm tracking-wide leading-5 max-w-[300px] transform-none">
-                    <span>
-                      If you'd rather get started with a mail - then write to us
-                      at{" "}
-                    </span>
-                    <a
-                      href="mailto:sales@hyperfit.com"
-                      className="text-orange-500 underline inline"
-                    >
-                      sales@hyperfit.com
-                    </a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="bg-white/5 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 w-2 h-2 rounded-full mt-3"></div>
+                  <div>
+                    <div className="text-white font-bold mb-2">1. Sign Up for FREE</div>
+                    <div className="text-white/80 text-sm">Start your 2-month free trial instantly. No credit card required.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 w-2 h-2 rounded-full mt-3"></div>
+                  <div>
+                    <div className="text-white font-bold mb-2">2. Complete Your Profile</div>
+                    <div className="text-white/80 text-sm">Tell us your goals and get a personalized fitness and nutrition plan.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 w-2 h-2 rounded-full mt-3"></div>
+                  <div>
+                    <div className="text-white font-bold mb-2">3. Access Everything Online</div>
+                    <div className="text-white/80 text-sm">Training videos, nutrition plans, recipes, and personal coaching - all through your dashboard.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 w-2 h-2 rounded-full mt-3"></div>
+                  <div>
+                    <div className="text-white font-bold mb-2">4. Continue for Just $15/month</div>
+                    <div className="text-white/80 text-sm">After your free trial, keep transforming for less than 50 cents per day.</div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-white/5 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Contact & Support</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="text-white font-bold mb-2">Email Support</div>
+                  <a
+                    href="mailto:support@hyperfit.com"
+                    className="text-orange-500 hover:text-orange-400 text-lg"
+                  >
+                    support@hyperfit.com
+                  </a>
+                  <div className="text-white/60 text-sm mt-1">Response within 24 hours</div>
+                </div>
+
+                <div>
+                  <div className="text-white font-bold mb-2">Sales & Billing</div>
+                  <a
+                    href="mailto:sales@hyperfit.com"
+                    className="text-orange-500 hover:text-orange-400 text-lg"
+                  >
+                    sales@hyperfit.com
+                  </a>
+                  <div className="text-white/60 text-sm mt-1">Questions about pricing and plans</div>
+                </div>
+
+                <div>
+                  <div className="text-white font-bold mb-2">Live Chat Support</div>
+                  <div className="text-white/80 text-sm">Available 7 days a week</div>
+                  <div className="text-white/60 text-sm">Mon-Fri: 8AM-8PM EST</div>
+                  <div className="text-white/60 text-sm">Sat-Sun: 10AM-6PM EST</div>
+                </div>
+
+                <div className="border-t border-white/10 pt-6">
+                  <div className="text-white font-bold mb-2">100% Online Platform</div>
+                  <div className="text-white/80 text-sm leading-relaxed">
+                    No physical location needed. Access your personalized fitness program,
+                    nutrition plans, and coaching from anywhere in the world. Train at home,
+                    in a hotel, or at your local gym - we provide the guidance.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 max-w-[600px] mx-auto">
+              <h3 className="text-white text-2xl font-bold mb-4">Start Your FREE Trial Now</h3>
+              <p className="text-white/90 mb-6">Join over 10,000 people who chose online fitness that actually works</p>
+              <a
+                href="#"
+                className="bg-white text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-gray-100 transition-colors inline-block"
+              >
+                GET 2 MONTHS FREE
+              </a>
             </div>
           </div>
         </div>
