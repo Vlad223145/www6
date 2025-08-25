@@ -653,7 +653,7 @@ export default function Index() {
           </div>
 
           {/* Trainers Features */}
-          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[700px] mx-auto my-15 transform-none">
+          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[700px] mx-auto mt-[26px] transform-none">
             <div className="flex items-center gap-4">
               <img
                 src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684fc4aac7e02f3dad49c3d5_profile-icon.svg"
@@ -697,7 +697,7 @@ export default function Index() {
           </div>
 
           {/* Trainers Grid */}
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-3 gap-10 mt-[22px]">
             {/* Trainer 1 */}
             <div className="transform-none">
               <div className="flex flex-col items-start gap-10 h-full">
