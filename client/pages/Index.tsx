@@ -820,7 +820,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       COMMUNITY FEELS LIKE HOME
                     </div>
                     <p className="text-white/80 text-sm leading-5 max-w-[230px]">
@@ -840,7 +840,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       PLANS THAT FIT REAL LIVES
                     </div>
                     <p className="text-white/80 text-sm leading-5 max-w-[230px]">
@@ -877,7 +877,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       SIMPLE, HUMAN EXPERIENCE
                     </div>
                     <p className="text-white/80 text-sm leading-5">
@@ -897,7 +897,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       NO HYPE, JUST RESULTS
                     </div>
                     <p className="text-white/80 text-sm leading-5">
