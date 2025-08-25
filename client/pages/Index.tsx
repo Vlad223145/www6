@@ -1580,12 +1580,11 @@ export default function Index() {
               {openFAQ === 0 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    Absolutely! We welcome all fitness levels. Our expert
-                    trainers will guide you step-by-step at your own pace. We'll
-                    start with a comprehensive fitness assessment to understand
-                    your current level and create a personalized plan that's
-                    perfect for beginners — no pressure, no judgment, just
-                    support.
+                    Absolutely! Our online platform is perfect for all fitness levels.
+                    Expert trainers guide you through video sessions step-by-step at your
+                    own pace. We start with an online fitness assessment to create a
+                    personalized plan perfect for beginners — no pressure, no judgment,
+                    just support from the comfort of your home.
                   </p>
                 </div>
               )}
@@ -1599,7 +1598,7 @@ export default function Index() {
                 className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
               >
                 <div className="font-bold text-xl leading-6 text-left text-white">
-                  Do I need to bring anything for my first session?
+                  What do I need to start my online training?
                 </div>
                 <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
                   <span className="text-black font-bold text-lg">
@@ -1610,11 +1609,10 @@ export default function Index() {
               {openFAQ === 1 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    Just bring comfortable workout clothes, athletic shoes, and
-                    a water bottle. We provide all the equipment you'll need
-                    including towels, mats, and weights. For your first intro
-                    session, we'll also provide a complimentary fitness
-                    assessment and goal-setting consultation.
+                    Just a device with internet access - phone, tablet, or computer.
+                    All workouts are designed for home training with minimal equipment.
+                    We'll provide equipment alternatives and bodyweight options. Your first
+                    online assessment and goal-setting consultation is completely free.
                   </p>
                 </div>
               )}
@@ -1726,11 +1724,10 @@ export default function Index() {
               {openFAQ === 5 && (
                 <div className="min-w-full pb-8 px-8 text-left">
                   <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                    You can cancel your membership anytime with 30 days written
-                    notice. We don't believe in binding contracts or
-                    cancellation fees. Simply speak with our front desk staff or
-                    send us an email, and we'll process your cancellation
-                    request promptly and hassle-free.
+                    You can cancel your $15/month membership anytime with 30 days written
+                    notice. We don't believe in binding contracts or cancellation fees.
+                    Simply contact our support team via email or live chat, and we'll
+                    process your cancellation request promptly and hassle-free.
                   </p>
                 </div>
               )}
