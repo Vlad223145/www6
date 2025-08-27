@@ -1,33 +1,26 @@
+import { useState } from "react";
+
 export default function Index() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
   return (
     <div className="min-h-screen bg-black">
       {/* Header Section */}
       <header className="bg-black fixed top-0 w-full z-[1000]">
-        {/* Top Contact Bar */}
-        <div className="bg-gradient-to-r from-orange-500 to-red-500 py-2.5">
-          <div className="max-w-[1320px] mx-auto px-5">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4 text-white">
-                <div className="font-medium text-sm">CONTACT@HYPERFIT.COM</div>
-                <div className="font-medium text-sm">/</div>
-                <div className="font-medium text-sm">(123) 456 - 7890</div>
-              </div>
-              <div className="flex items-center gap-4 text-white">
-                <div className="font-medium text-sm">
-                  MONDAY - FRIDAY [ 7 AM - 10 PM ]
-                </div>
-                <div className="font-medium text-sm">/</div>
-                <div className="font-medium text-sm">
-                  SATURDAY - SUNDAY [ 7 AM - 9 AM ]
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Main Navigation */}
         <div className="max-w-[1320px] mx-auto px-5">
-          <div className="flex items-center justify-between py-6">
+          <div className="flex items-center justify-between py-6 -ml-1">
             {/* Logo */}
             <a href="#home" className="relative">
               <img
@@ -39,37 +32,43 @@ export default function Index() {
 
             {/* Navigation Menu */}
             <nav className="relative">
-              <div className="flex gap-6">
-                <a
-                  href="#about"
+              <div className="flex gap-6 -ml-12">
+                <button
+                  onClick={() => scrollToSection("about")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   About
-                </a>
-                <a
-                  href="#services"
+                </button>
+                <button
+                  onClick={() => scrollToSection("services")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Services
-                </a>
-                <a
-                  href="#pricing"
+                </button>
+                <button
+                  onClick={() => scrollToSection("pricing")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Pricing
-                </a>
-                <a
-                  href="#testimonials"
+                </button>
+                <button
+                  onClick={() => scrollToSection("testimonials")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   Testimonials
-                </a>
-                <a
-                  href="#faq"
+                </button>
+                <button
+                  onClick={() => scrollToSection("faq")}
                   className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
                 >
                   FAQ
-                </a>
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="bg-white/20 rounded-full px-6 py-3 text-white font-medium text-sm uppercase transition-all duration-300 hover:bg-white/30"
+                >
+                  Contact
+                </button>
               </div>
             </nav>
 
@@ -78,18 +77,7 @@ export default function Index() {
               <a
                 href="#pricing"
                 className="flex items-center text-white font-bold text-sm uppercase"
-              >
-                <div className="bg-white text-black rounded-full px-7 py-3.5 font-bold uppercase">
-                  Buy Template
-                </div>
-                <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center ml-0">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                    alt=""
-                    className="max-w-full"
-                  />
-                </div>
-              </a>
+              ></a>
 
               {/* Mobile Menu Button */}
               <div className="hidden cursor-pointer">
@@ -136,8 +124,9 @@ export default function Index() {
                 </h1>
               </div>
               <p className="text-white/80 text-sm leading-5 max-w-[360px] blur-0 transform-none filter">
-                Just simple, effective workouts tailored to your goals — guided
-                by real people who care.
+                Get 2 months absolutely FREE - complete training programs, nutrition
+                plans, healthy recipes, video lessons, and personal support. Everything
+                you need to transform your fitness journey.
               </p>
               <div className="flex items-center flex-wrap gap-3 blur-0 transform-none filter">
                 <a
@@ -145,29 +134,13 @@ export default function Index() {
                   className="flex items-center text-white font-bold text-sm uppercase"
                 >
                   <div className="bg-white text-black rounded-full px-7 py-3.5 font-bold uppercase">
-                    <p>Try now</p>
-                  </div>
-                  <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center">
-                    <img
-                      src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                      alt=""
-                      className="max-w-full"
-                    />
+                    Try now
                   </div>
                 </a>
               </div>
             </div>
             <div className="flex flex-col items-center gap-10 max-w-[530px]">
-              <div className="flex items-center gap-4 blur-0 transform-none filter mt-[76px] pb-[82px]">
-                <img
-                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72db401e83a5d3ef9ec_currency-exchange.svg"
-                  alt=""
-                  className="max-w-full"
-                />
-                <div className="text-white font-bold text-sm leading-5 uppercase">
-                  AFFORDABLE TRAINING & EATING PLANS
-                </div>
-              </div>
+              <div className="flex items-center gap-4 blur-0 transform-none filter mt-[76px] pb-[82px]"></div>
             </div>
           </div>
         </div>
@@ -178,51 +151,32 @@ export default function Index() {
         <div className="absolute top-0 left-0 w-1/4 h-0 bg-black z-[9999]"></div>
       </section>
 
-      {/* Company Logos Section */}
-      <section className="bg-white/5 py-6">
-        <div className="max-w-[1320px] mx-auto px-5">
-          <div className="flex items-center gap-10">
-            <div className="text-white/60 text-sm font-bold leading-5 uppercase transform-none">
-              TRUSTED BY ENTERPRISE LEADERS:
-            </div>
-            <div className="flex items-center justify-between gap-10 transform-none">
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d84cb6e53807362a4_company-logo1.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72dbabc055895c9381a_company-logo2.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9bd684ae7087bd1a_company-logo3.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d2abe9be22f409b5d_company-logo4.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d38d2509308830465_company-logo5.svg"
-                alt=""
-                className="max-w-full"
-              />
-              <img
-                src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d22a4724e97e3150a_company-logo6.svg"
-                alt=""
-                className="max-w-full"
-              />
-            </div>
-          </div>
+      {/* Ticker Section */}
+      <section className="bg-white/5 py-6 overflow-hidden">
+        <div className="ticker-content whitespace-nowrap">
+          <span className="text-white font-black text-6xl tracking-wider">
+            TRY 2 MONTHS FOR{" "}
+          </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">
+            FREE
+          </span>
+          <span className="text-white font-black text-6xl tracking-wider mx-20">
+            TRY 2 MONTHS FOR{" "}
+          </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">
+            FREE
+          </span>
+          <span className="text-white font-black text-6xl tracking-wider mx-20">
+            TRY 2 MONTHS FOR{" "}
+          </span>
+          <span className="text-green-500 font-black text-6xl tracking-wider">
+            FREE
+          </span>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20">
+      <section id="about" className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col gap-6 text-center">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center">
@@ -234,15 +188,23 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 max-w-[500px] mx-auto text-center transform-none">
-              We're more than just a gym. We're a space built for every kind of
-              journey — whether you're just starting or looking to push your
-              limits. Here, it's not about perfection. It's about progress, your
-              way.
+              Experience our complete ONLINE fitness ecosystem FREE for 2 months. Get personal
+              training, nutrition guidance, 200+ healthy recipes, video workouts, and
+              dedicated support. No gym needed - everything delivered digitally to transform your journey.
             </p>
+            <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl p-6 max-w-[400px] mx-auto mt-12">
+              <div className="text-center">
+                <div className="text-white font-bold text-lg mb-2">After FREE Trial</div>
+                <div className="text-3xl font-black text-white mb-1">
+                  <span className="text-green-500">$15</span>/month
+                </div>
+                <div className="text-white/60 text-sm">Full access to everything • Cancel anytime</div>
+              </div>
+            </div>
           </div>
 
           {/* Stats Bar */}
-          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[850px] mx-auto my-15 transform-none">
+          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[850px] mx-auto mt-[85px] transform-none">
             <div className="flex items-center gap-4">
               <img
                 src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d903f201509ea6d4b_about-icon1.svg"
@@ -361,7 +323,7 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white/5 py-20">
+      <section id="services" className="bg-white/5 py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="grid grid-cols-3 gap-x-16 gap-y-10 items-start">
             {/* Services Content */}
@@ -379,8 +341,9 @@ export default function Index() {
                   </span>
                 </h2>
                 <p className="text-white/80 text-sm leading-5 max-w-[360px] transform-none">
-                  From personal training to nutrition and recovery — we cover
-                  what your body truly needs.
+                  Experience our complete fitness ecosystem FREE for 2 months:
+                  personal training, nutrition guidance, healthy recipes, video
+                  workouts, and dedicated support — everything included.
                 </p>
                 <div className="flex items-center flex-wrap gap-3 mt-2 transform-none">
                   <a
@@ -388,14 +351,7 @@ export default function Index() {
                     className="flex items-center text-white font-bold text-sm uppercase"
                   >
                     <div className="bg-white text-black rounded-full px-7 py-3.5 font-bold uppercase">
-                      <p>Try now</p>
-                    </div>
-                    <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                        alt=""
-                        className="max-w-full"
-                      />
+                      Try now
                     </div>
                   </a>
                 </div>
@@ -412,7 +368,7 @@ export default function Index() {
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
                     One-on-one coaching, fully focused on your goals, fitness
-                    level, and progress.
+                    level, and progress. Included FREE in your 2-month trial.
                   </p>
                 </div>
                 <div className="flex items-end justify-center text-right w-[48%]">
@@ -465,8 +421,8 @@ export default function Index() {
                     NUTRITION GUIDANCE
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
-                    Simple, practical food advice that works in real life. No
-                    extremes, just balance.
+                    Complete nutrition plans with healthy recipes and meal guides.
+                    Everything you need for balanced eating - FREE for 2 months.
                   </p>
                 </div>
                 <div className="flex items-end justify-center text-right w-[48%]">
@@ -627,8 +583,8 @@ export default function Index() {
                     PROGRESS TRACKING
                   </h3>
                   <p className="text-white/60 text-lg leading-[22.5px] mt-3 max-w-[338px]">
-                    We track what matters — so you can see how far you've come,
-                    and where you're headed next.
+                    Complete progress tracking with video tutorials and personal
+                    support. All included FREE in your 2-month trial.
                   </p>
                 </div>
                 <div className="flex items-end justify-center text-right w-[48%]">
@@ -697,7 +653,7 @@ export default function Index() {
           </div>
 
           {/* Trainers Features */}
-          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[700px] mx-auto my-15 transform-none">
+          <div className="flex items-center justify-between border border-white/20 rounded-full px-8 py-4 max-w-[700px] mx-auto mt-[26px] transform-none">
             <div className="flex items-center gap-4">
               <img
                 src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684fc4aac7e02f3dad49c3d5_profile-icon.svg"
@@ -741,7 +697,7 @@ export default function Index() {
           </div>
 
           {/* Trainers Grid */}
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-3 gap-10 mt-[22px]">
             {/* Trainer 1 */}
             <div className="transform-none">
               <div className="flex flex-col items-start gap-10 h-full">
@@ -758,31 +714,10 @@ export default function Index() {
                     className="hidden absolute -bottom-[50px] -left-[55px] -right-[30%] h-[145px] max-w-full opacity-0 rounded-xl filter blur-[3px]"
                   />
                 </div>
-                <p className="hidden text-lg leading-[22.5px] max-w-[330px]">
+                <p className="text-lg leading-[22.5px] max-w-[330px]">
                   Empowering women through strength and movement. 6+ years of
                   experience.
                 </p>
-                <div className="flex flex-col items-start gap-3">
-                  <div className="text-2xl font-black leading-[30px]">
-                    ANJALI SINGH
-                  </div>
-                  <div className="text-white/80 text-sm leading-5">
-                    Strength & Functional Coach
-                  </div>
-                  <a
-                    href="#"
-                    className="hidden items-center bg-white/10 rounded-full px-4 py-2 text-lg font-medium gap-2 max-w-full"
-                  >
-                    <div className="text-lg font-medium leading-[21.6px]">
-                      Buy Me a Coffee
-                    </div>
-                    <img
-                      src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684fc8ad759937913da41e88_buy-me-a-coffee-icon.svg"
-                      alt=""
-                      className="inline-block max-w-full"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
 
@@ -802,31 +737,10 @@ export default function Index() {
                     className="hidden absolute -bottom-[50px] -left-[55px] -right-[30%] h-[145px] max-w-full opacity-0 rounded-xl filter blur-[3px]"
                   />
                 </div>
-                <p className="hidden text-lg leading-[22.5px] max-w-[330px]">
+                <p className="text-lg leading-[22.5px] max-w-[330px]">
                   Believes in slow, sustainable changes that stick — with a mix
                   of grit and grace.
                 </p>
-                <div className="flex flex-col items-start gap-3">
-                  <div className="text-2xl font-black leading-[30px]">
-                    ROHAN MEHTA
-                  </div>
-                  <div className="text-white/80 text-sm leading-5">
-                    Personal Trainer & Nutrition
-                  </div>
-                  <a
-                    href="#"
-                    className="hidden items-center bg-white/10 rounded-full px-4 py-2 text-lg font-medium gap-2 max-w-full"
-                  >
-                    <div className="text-lg font-medium leading-[21.6px]">
-                      Buy Me a Coffee
-                    </div>
-                    <img
-                      src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684fc8ad759937913da41e88_buy-me-a-coffee-icon.svg"
-                      alt=""
-                      className="inline-block max-w-full"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
 
@@ -846,31 +760,10 @@ export default function Index() {
                     className="hidden absolute -bottom-[50px] -left-[55px] -right-[30%] h-[145px] max-w-full opacity-0 rounded-xl filter blur-[3px]"
                   />
                 </div>
-                <p className="hidden text-lg leading-[22.5px] max-w-[330px]">
+                <p className="text-lg leading-[22.5px] max-w-[330px]">
                   Helps people reconnect with their bodies through mindful
                   movement.
                 </p>
-                <div className="flex flex-col items-start gap-3">
-                  <div className="text-2xl font-black leading-[30px]">
-                    PRIYA DAS
-                  </div>
-                  <div className="text-white/80 text-sm leading-5">
-                    Yoga & Flexibility Coach
-                  </div>
-                  <a
-                    href="#"
-                    className="hidden items-center bg-white/10 rounded-full px-4 py-2 text-lg font-medium gap-2 max-w-full"
-                  >
-                    <div className="text-lg font-medium leading-[21.6px]">
-                      Buy Me a Coffee
-                    </div>
-                    <img
-                      src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684fc8ad759937913da41e88_buy-me-a-coffee-icon.svg"
-                      alt=""
-                      className="inline-block max-w-full"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -893,9 +786,9 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 max-w-[509px] mx-auto text-center transform-none">
-              Hyperfit isn't just another gym template. It's designed for real
-              people, real journeys - with everything built around ease,
-              clarity, and community.
+              Start your FREE 2-month journey today. Get complete access to training,
+              nutrition plans, video lessons, recipes, and personal support.
+              No contracts, no hidden fees - just results.
             </p>
             <div className="flex items-center flex-wrap justify-center gap-3 mt-2 text-center transform-none">
               <a
@@ -903,7 +796,7 @@ export default function Index() {
                 className="flex items-center text-white font-bold text-sm uppercase text-center"
               >
                 <div className="border-2 border-white rounded-full px-7 py-3.5 font-bold uppercase text-center">
-                  WATCH VIDEO
+                  WATCH FREE PREVIEW
                 </div>
                 <div className="border-2 border-white rounded-full w-12 h-12 flex items-center justify-center">
                   <img
@@ -927,7 +820,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       COMMUNITY FEELS LIKE HOME
                     </div>
                     <p className="text-white/80 text-sm leading-5 max-w-[230px]">
@@ -947,7 +840,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       PLANS THAT FIT REAL LIVES
                     </div>
                     <p className="text-white/80 text-sm leading-5 max-w-[230px]">
@@ -984,11 +877,11 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       SIMPLE, HUMAN EXPERIENCE
                     </div>
                     <p className="text-white/80 text-sm leading-5">
-                      Clean layouts and intuitive flows that feel natural — not
+                      Clean layouts and intuitive flows that feel natural �� not
                       overwhelming.
                     </p>
                   </div>
@@ -1004,7 +897,7 @@ export default function Index() {
                     className="bg-[#0d0d0d] -mt-3 max-w-full relative z-[1] transform-none"
                   />
                   <div className="bg-[#0d0d0d] flex flex-col gap-3.5 relative z-[1] transform-none">
-                    <div className="text-sm font-medium leading-5">
+                    <div className="text-sm font-medium leading-5 text-white">
                       NO HYPE, JUST RESULTS
                     </div>
                     <p className="text-white/80 text-sm leading-5">
@@ -1017,6 +910,47 @@ export default function Index() {
                     <div className="bg-white h-0.5 w-[130px]"></div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recipes Section */}
+      <section className="py-20">
+        <div className="max-w-[1320px] mx-auto px-5">
+          <div className="flex flex-col items-center gap-10">
+            <h2 className="text-[48px] font-black leading-[43.2px] text-center text-white">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">200+ FREE RECIPES</span> OF THE MOST DELICIOUS DISHES FOR WEIGHT LOSS
+            </h2>
+            <p className="text-white/80 text-lg leading-6 max-w-[600px] mx-auto text-center">
+              Access our complete recipe library FREE for 2 months - healthy, delicious meals
+              with step-by-step video tutorials and nutritional guidance.
+            </p>
+
+            <div className="flex items-center justify-center gap-8 flex-wrap">
+              <div className="flex flex-col items-center gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faa57fa3495ed440bb8d5e43633a5eae3%2Fa33d2c274fd54437bc4b524246da78df?format=webp&width=800"
+                  alt="Delicious pancakes with berries"
+                  className="w-[200px] h-[200px] rounded-full object-cover"
+                />
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faa57fa3495ed440bb8d5e43633a5eae3%2Fcee6e50756d841758d154773895ee2e7?format=webp&width=800"
+                  alt="Fresh healthy salad"
+                  className="w-[200px] h-[200px] rounded-full object-cover"
+                />
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faa57fa3495ed440bb8d5e43633a5eae3%2F92858630486c4aa5834867ecec309fae?format=webp&width=800"
+                  alt="Nutritious noodle bowl"
+                  className="w-[200px] h-[200px] rounded-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -1049,7 +983,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     01
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1089,7 +1023,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Book a Free Intro Session
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1104,7 +1038,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     02
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1144,7 +1078,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Get a Personal Fitness Check
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1159,7 +1093,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     03
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1199,7 +1133,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Start with a Plan Made for You
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1215,7 +1149,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 justify-self-end transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     04
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1255,7 +1189,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Train with the Right Support
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1270,7 +1204,7 @@ export default function Index() {
             <div className="col-span-4 grid-row-1 justify-self-start transform-none">
               <div className="bg-white/5 rounded-2xl flex flex-col gap-15 px-8 py-8">
                 <div className="flex items-start flex-wrap justify-between gap-13">
-                  <div className="text-[48px] font-bold leading-[43.2px]">
+                  <div className="text-[48px] font-bold leading-[43.2px] text-white">
                     05
                   </div>
                   <div className="-mt-9 opacity-0">
@@ -1310,7 +1244,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div className="text-2xl font-bold leading-[30px]">
+                  <div className="text-2xl font-bold leading-[30px] text-white">
                     Track Progress & Stay Consistent
                   </div>
                   <p className="text-white/80 text-sm leading-5 max-w-[310px]">
@@ -1326,9 +1260,9 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section id="pricing" className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
-          <div className="flex flex-col gap-6 text-center">
+          <div className="flex flex-col gap-6 text-center mt-px">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center">
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent transform-none">
                 JOIN THE WAY THAT
@@ -1348,20 +1282,13 @@ export default function Index() {
 
           <div className="mt-15 relative">
             {/* Pricing Tabs */}
-            <div className="flex items-center justify-center mb-15 relative transform-none">
+            <div className="flex items-center justify-center mb-15 relative transform-none mt-[19px]">
               <a
                 role="tab"
                 href="#monthly"
                 className="bg-white text-black rounded-full px-6 py-3 font-bold text-sm relative"
               >
-                <div className="text-black font-bold text-sm">PAY MONTHLY</div>
-              </a>
-              <a
-                role="tab"
-                href="#yearly"
-                className="bg-white/5 rounded-full px-6 py-3 font-bold text-sm relative"
-              >
-                <div className="font-bold text-sm">PAY YEARLY</div>
+                <p>TRY</p>
               </a>
             </div>
 
@@ -1369,80 +1296,13 @@ export default function Index() {
               {/* Monthly Plans */}
               <div className="relative">
                 <div className="grid grid-cols-3 gap-5">
-                  {/* Starter Plan */}
-                  <div className="pb-1.5 px-0 py-0 relative transform-none">
-                    <div className="bg-white/5 rounded-2xl flex flex-col gap-8 px-7 py-11">
-                      <div className="relative">
-                        <div
-                          className="bg-[#191919] rounded-xl h-full absolute origin-bottom-center w-full"
-                          style={{
-                            transform: "matrix(0.87, 0, 0, 0.87, 0, 0)",
-                          }}
-                        ></div>
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685010182c0cfa0af49afab5_plan-card1.svg"
-                          loading="lazy"
-                          alt=""
-                          className="rounded-xl inline-block max-w-full relative w-full z-[1]"
-                          style={{ transform: "matrix(1, 0, 0, 1, 0, -16)" }}
-                        />
-                      </div>
-                      <div className="flex flex-col gap-6">
-                        <div className="text-xs font-bold tracking-wider leading-[15px] uppercase">
-                          STARTER MEMBERSHIP
-                        </div>
-                        <div className="text-[48px] font-bold leading-[43.2px]">
-                          <span>$244.99</span>
-                          <span className="inline text-sm leading-5">
-                            / MONTH
-                          </span>
-                        </div>
-                        <div className="text-white/80 text-sm leading-5 max-w-[250px]">
-                          For beginners or anyone who wants to keep it flexible.
-                        </div>
-                      </div>
-                      <a
-                        href="#contact"
-                        className="flex items-center font-bold text-sm uppercase"
-                      >
-                        <div className="bg-white/10 rounded-full px-7 py-3.5 font-bold uppercase text-center w-full">
-                          <div className="font-bold text-sm uppercase text-center">
-                            BOOK A MEMBERSHIP
-                          </div>
-                        </div>
-                        <div className="bg-white/10 rounded-full w-12 h-12 flex items-center justify-center">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full filter invert"
-                          />
-                        </div>
-                      </a>
-                      <div className="flex flex-col items-start gap-4.5 relative">
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Unlimited gym access
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Group fitness classes
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          1 personal training session/month
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          No long-term commitment
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Flexible schedule — come in anytime
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Starter Plan - Removed */}
+                  <div className="pb-1.5 px-0 py-0 relative transform-none"></div>
 
                   {/* Progress Plan */}
                   <div className="pb-1.5 px-0 py-0 relative transform-none">
                     <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl h-full absolute left-0 top-0 w-full z-0"></div>
-                    <div className="bg-black rounded-2xl flex flex-col gap-8 overflow-hidden px-7 py-11 relative z-[1]">
+                    <div className="bg-[#0e0d0d] rounded-2xl flex flex-col gap-8 overflow-hidden px-7 py-11 relative z-[1] text-white">
                       <div className="relative">
                         <div
                           className="bg-[#0f0f0f] rounded-xl h-full absolute origin-bottom-center w-full"
@@ -1463,7 +1323,9 @@ export default function Index() {
                           PROGRESS MEMBERSHIP
                         </div>
                         <div className="text-[48px] font-bold leading-[43.2px]">
-                          <span>$649.99</span>
+                          <span>
+                            <p>$0.00</p>
+                          </span>
                           <span className="inline text-sm leading-5">
                             / 3 MONTH
                           </span>
@@ -1513,76 +1375,8 @@ export default function Index() {
                     </div>
                   </div>
 
-                  {/* Commit Plan */}
-                  <div className="pb-1.5 px-0 py-0 relative transform-none">
-                    <div className="bg-white/5 rounded-2xl flex flex-col gap-8 px-7 py-11">
-                      <div className="relative">
-                        <div
-                          className="bg-[#191919] rounded-xl h-full absolute origin-bottom-center w-full"
-                          style={{
-                            transform: "matrix(0.87, 0, 0, 0.87, 0, 0)",
-                          }}
-                        ></div>
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685010185587ccb09b0ce2a0_plan-card3.svg"
-                          loading="lazy"
-                          alt=""
-                          className="rounded-xl inline-block max-w-full relative w-full z-[1]"
-                          style={{ transform: "matrix(1, 0, 0, 1, 0, -16)" }}
-                        />
-                      </div>
-                      <div className="flex flex-col gap-6">
-                        <div className="text-xs font-bold tracking-wider leading-[15px] uppercase">
-                          COMMIT MEMBERSHIP
-                        </div>
-                        <div className="text-[48px] font-bold leading-[43.2px]">
-                          <span>$1,199.00</span>
-                          <span className="inline text-sm leading-5">
-                            / 6 MONTH
-                          </span>
-                        </div>
-                        <div className="text-white/80 text-sm leading-5 max-w-[250px]">
-                          For those serious about long-term results — steady,
-                          focused.
-                        </div>
-                      </div>
-                      <a
-                        href="#contact"
-                        className="flex items-center font-bold text-sm uppercase"
-                      >
-                        <div className="bg-white/10 rounded-full px-7 py-3.5 font-bold uppercase text-center w-full">
-                          <div className="font-bold text-sm uppercase text-center">
-                            BOOK A MEMBERSHIP
-                          </div>
-                        </div>
-                        <div className="bg-white/10 rounded-full w-12 h-12 flex items-center justify-center">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/684bd72d9064731ba17ea52b_button-arrow.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full filter invert"
-                          />
-                        </div>
-                      </a>
-                      <div className="flex flex-col items-start gap-4.5 relative">
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Everything in the Progress plan
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          4 personal training sessions every month
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Access to workshops & expert sessions
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Exclusive invites to premium events
-                        </div>
-                        <div className="border-b border-dashed border-white/60 pb-1.25 text-white/80 text-sm leading-5">
-                          Best value for consistent, long-term
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Commit Plan - Removed */}
+                  <div className="pb-1.5 px-0 py-0 relative transform-none"></div>
                 </div>
               </div>
             </div>
@@ -1591,7 +1385,7 @@ export default function Index() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-white/5 py-20">
+      <section id="testimonials" className="bg-white/5 py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col gap-6 text-center">
             <div className="text-white font-bold text-sm leading-5 text-center uppercase transform-none">
@@ -1606,88 +1400,289 @@ export default function Index() {
               </span>
             </h2>
             <p className="text-white/80 text-sm leading-5 text-center transform-none">
-              Just a place where you can grow - your way.
+              Real results from real people who transformed their lives with our online fitness platform.
             </p>
           </div>
 
-          <div className="max-w-[830px] mx-auto mt-15 transform-none">
-            <div className="relative text-center">
-              <div className="h-full left-0 overflow-hidden relative right-0 text-center whitespace-nowrap z-[1]">
-                <div className="inline-block h-full mr-5 relative text-left align-top w-full transform-none">
-                  <div className="grid grid-cols-2 gap-0 text-left">
-                    <div className="text-left">
-                      <div className="flex flex-col items-start bg-white/5 bg-[radial-gradient(circle_at_0px_0px,_rgba(32,175,54,0.1),_rgba(0,0,0,0))] rounded-t-2xl rounded-bl-2xl h-full justify-center px-8 py-8 text-left">
-                        <div className="flex items-center gap-3 text-left">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
-                            loading="lazy"
-                            alt="User Image"
-                            className="h-[55px] max-w-full text-left w-[55px]"
-                          />
-                          <div className="flex flex-col gap-1 text-left">
-                            <div className="text-2xl font-bold leading-[30px] text-left">
-                              Deepa khan
-                            </div>
-                            <div className="text-white/80 text-sm leading-5 text-left">
-                              May 29, 2024
-                            </div>
-                          </div>
-                        </div>
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098b597b924b96a875bf_shape.svg"
-                          loading="lazy"
-                          alt=""
-                          className="mb-6 mt-10 max-w-full text-left"
-                        />
-                        <p className="text-white/80 text-lg leading-[22.5px] max-w-[320px] text-left">
-                          When I joined, I was nervous. But the trainers never
-                          made me feel behind or out of place. They understood
-                          my goals and gave me the space to grow.
-                        </p>
-                        <div className="flex items-center gap-1 mt-12.5 text-left">
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098b6818536c0cb6b73a_star-light.svg"
-                            loading="lazy"
-                            alt=""
-                            className="max-w-full text-left"
-                          />
-                        </div>
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-15">
+            {/* Testimonial 1 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Sarah M."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Sarah M.</div>
+                  <div className="text-white/60 text-sm">Lost 25 lbs in 3 months</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "The online platform is amazing! I never thought I could get such personalized training from home. The recipes are delicious and the video tutorials made everything so easy to follow."
+              </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Mike T."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Mike T.</div>
+                  <div className="text-white/60 text-sm">Gained 15 lbs muscle</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "Best $15/month I spend! The personal coaching calls and custom workout plans helped me build more muscle than I ever did at traditional gyms. Everything online but feels so personal."
+              </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Emma L."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Emma L.</div>
+                  <div className="text-white/60 text-sm">Transformed lifestyle</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "As a busy mom, having everything online was perfect. The 2-month free trial convinced me - now I can't imagine life without my daily workouts and healthy recipes. Worth every penny!"
+              </p>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="James R."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">James R.</div>
+                  <div className="text-white/60 text-sm">Beginner to athlete</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "Started as a complete beginner. The support team guided me through every step. 6 months later, I'm in the best shape of my life. The online format actually works better for me than any gym."
+              </p>
+            </div>
+
+            {/* Testimonial 5 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="Lisa K."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">Lisa K.</div>
+                  <div className="text-white/60 text-sm">Improved health</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "The nutrition guidance and recipes changed my relationship with food. Having everything accessible online means I never miss a workout. The community support is incredible too!"
+              </p>
+            </div>
+
+            {/* Testimonial 6 */}
+            <div className="bg-white/5 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098cdee8ef9e581c6519_user-image1.png"
+                  alt="David P."
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg">David P.</div>
+                  <div className="text-white/60 text-sm">Consistent results</div>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <img key={star} src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098a406c7c5fed8b2e54_star-full.svg" alt="" className="w-4 h-4" />
+                ))}
+              </div>
+              <p className="text-white/80 text-sm leading-relaxed">
+                "Tried many fitness programs before. This online platform finally gave me the structure and accountability I needed. The progress tracking keeps me motivated every day."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* What You Get After Free Trial Section */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-[1320px] mx-auto px-5">
+          <div className="text-center mb-15">
+            <h2 className="text-[48px] font-black leading-[43.2px] text-center mb-6">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mr-[19px]">
+                ACTIVATE YOUR FREE
+              </span>
+              <span className="text-white font-black">
+                2-MONTH TRIAL TODAY
+              </span>
+            </h2>
+            <p className="text-white/80 text-lg leading-6 max-w-[600px] mx-auto">
+              Everything you need to transform your fitness journey is waiting for you.
+              Start immediately with full access to our complete online platform.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-white mb-6">What You Get Instantly:</h3>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Personal Training Sessions</div>
+                    <div className="text-white/80 text-sm">One-on-one video coaching sessions customized to your fitness level and goals</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Complete Nutrition Program</div>
+                    <div className="text-white/80 text-sm">200+ healthy recipes, meal plans, and personalized nutrition guidance</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Video Workout Library</div>
+                    <div className="text-white/80 text-sm">Hundreds of exercise videos for strength, cardio, yoga, and flexibility training</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">Progress Tracking Tools</div>
+                    <div className="text-white/80 text-sm">Monitor your improvements with detailed analytics and achievement milestones</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
+                    alt=""
+                    className="w-6 h-6 mt-1"
+                  />
+                  <div>
+                    <div className="text-white font-bold text-lg mb-2">24/7 Support Access</div>
+                    <div className="text-white/80 text-sm">Get help whenever you need it through our online support system</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+
+              <div className="space-y-6">
+                <div>
+                  <div className="text-white font-bold text-lg mb-2">Primary Contact</div>
+                  <a
+                    href="mailto:support@hyperfit.com"
+                    className="text-orange-500 hover:text-orange-400 text-lg font-medium"
+                  >
+                    support@hyperfit.com
+                  </a>
+                  <div className="text-white/60 text-sm mt-1">For all questions and technical support</div>
+                </div>
+
+                <div>
+                  <div className="text-white font-bold text-lg mb-2">Business Hours</div>
+                  <div className="space-y-2 text-white/80">
+                    <div className="flex justify-between">
+                      <span>Monday - Friday:</span>
+                      <span>6:00 AM - 10:00 PM EST</span>
                     </div>
-                    <div className="text-left">
-                      <div className="rounded-r-2xl h-full overflow-hidden text-left">
-                        <img
-                          src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851098d3c1f0322d26d4040_user-large-image1.webp"
-                          loading="lazy"
-                          alt="User Image"
-                          className="inline-block h-[415px] max-w-full object-cover text-left w-full"
-                        />
-                      </div>
+                    <div className="flex justify-between">
+                      <span>Saturday:</span>
+                      <span>8:00 AM - 8:00 PM EST</span>
                     </div>
+                    <div className="flex justify-between">
+                      <span>Sunday:</span>
+                      <span>10:00 AM - 6:00 PM EST</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-white/10 pt-6">
+                  <div className="text-white font-bold text-lg mb-2">Response Time</div>
+                  <div className="text-white/80 text-sm">
+                    During business hours: Within 2 hours<br/>
+                    Outside business hours: Next business day<br/>
+                    Emergency support: Always available
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl p-4 mt-6">
+                  <div className="text-center">
+                    <div className="text-white font-bold text-lg mb-2">After 2 FREE Months</div>
+                    <div className="text-3xl font-black text-white">
+                      <span className="text-green-500">$15</span>
+                      <span className="text-white text-lg">/month</span>
+                    </div>
+                    <div className="text-white/80 text-sm mt-1">Continue your transformation journey</div>
                   </div>
                 </div>
               </div>
@@ -1697,7 +1692,7 @@ export default function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section id="faq" className="py-20">
         <div className="max-w-[1320px] mx-auto px-5">
           <div className="flex flex-col gap-6 text-center">
             <h2 className="text-[48px] font-black leading-[43.2px] text-center">
@@ -1711,432 +1706,204 @@ export default function Index() {
           </div>
 
           <div className="flex flex-col gap-5 max-w-[810px] mx-auto mt-15">
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 0 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(0)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   I'm a complete beginner. Can I still join Hyperfit?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 0 ? "−" : "+"}
+                  </span>
                 </div>
-              </div>
-              <div className="hidden min-w-full pb-8 px-8 text-left">
-                <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
-                  Absolutely. We welcome all fitness levels. Our trainers will
-                  guide you at your own pace — no pressure, no judgment.
-                </p>
-              </div>
+              </button>
+              {openFAQ === 0 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Absolutely! Our online platform is perfect for all fitness levels.
+                    Expert trainers guide you through video sessions step-by-step at your
+                    own pace. We start with an online fitness assessment to create a
+                    personalized plan perfect for beginners — no pressure, no judgment,
+                    just support from the comfort of your home.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
-                  Do I need to bring anything for my first session?
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 1 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(1)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
+                  What do I need to start my online training?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 1 ? "−" : "+"}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 1 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Just a device with internet access - phone, tablet, or computer.
+                    All workouts are designed for home training with minimal equipment.
+                    We'll provide equipment alternatives and bodyweight options. Your first
+                    online assessment and goal-setting consultation is completely free.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 2 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(2)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   Are personal training sessions included in the plans?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 2 ? "−" : "+"}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 2 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Yes! Our Progress Membership includes 2 personal training
+                    sessions every month, while our Commit Membership includes 4
+                    sessions monthly. Each session is tailored to your specific
+                    goals and fitness level, ensuring maximum results and proper
+                    form guidance from our certified trainers.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 3 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(3)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   What kind of group classes do you offer?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 3 ? "−" : "+"}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 3 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    We offer a variety of classes including Strength &
+                    Conditioning, Yoga & Flexibility, HIIT workouts, functional
+                    training, and nutrition workshops. All classes are designed
+                    for different fitness levels and are led by certified
+                    instructors who provide modifications for every participant.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 4 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(4)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   Can I freeze or pause my membership if needed?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 4 ? "−" : "+"}
+                  </span>
                 </div>
-              </div>
+              </button>
+              {openFAQ === 4 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Yes, we understand life happens! You can freeze your
+                    membership for up to 3 months per year for valid reasons
+                    like travel, injury, or family circumstances. Simply give us
+                    7 days notice and we'll pause your membership without any
+                    fees.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="border-b border-white/10 rounded-xl h-[90px] mx-auto overflow-hidden relative text-left w-full z-[900] transform-none">
-              <div className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left whitespace-nowrap select-none align-top w-full">
-                <div className="font-bold text-xl leading-6 text-left whitespace-nowrap select-none">
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 5 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(5)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
                   How do I cancel my membership?
                 </div>
-                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left whitespace-nowrap select-none w-11">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/68511f38621a89afd0a42e2e_95b11739d45ea1429f3fc84b0450f294_faq-toggle.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full text-left whitespace-nowrap select-none"
-                  />
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 5 ? "−" : "+"}
+                  </span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="max-w-[1320px] mx-auto px-5">
-          <div className="grid grid-cols-2 gap-x-12.5">
-            <div>
-              <div className="flex flex-col gap-31">
-                <div className="flex flex-col gap-6">
-                  <h2 className="text-[48px] font-black leading-[43.2px] transform-none">
-                    GET IN TOUCH
-                  </h2>
-                  <p className="text-white/80 text-sm leading-5 max-w-[294px] transform-none">
-                    Have a question? Want to visit? We're here to help you take
-                    the first step.
+              </button>
+              {openFAQ === 5 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    You can cancel your $15/month membership anytime with 30 days written
+                    notice. We don't believe in binding contracts or cancellation fees.
+                    Simply contact our support team via email or live chat, and we'll
+                    process your cancellation request promptly and hassle-free.
                   </p>
                 </div>
-
-                <div className="flex flex-col gap-4">
-                  <div className="text-white/80 text-sm leading-5 transform-none">
-                    Visit us:
-                  </div>
-                  <div className="flex flex-wrap gap-6">
-                    <div className="flex items-start gap-3 transform-none">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133f4621a89afd0b0fc94_india-flag.svg"
-                        loading="lazy"
-                        alt=""
-                        className="mt-0.5 max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px] max-w-[370px]">
-                        Hyperfit Studio, 2nd Floor, Main Street, Sector 12,
-                        Bangalore, India
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 transform-none">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133fa19556782d9391f36_dubai-flag.svg"
-                        loading="lazy"
-                        alt=""
-                        className="mt-0.5 max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px] max-w-[370px]">
-                        Hyperfit Studio, Office 304, Al Barsha Heights Dubai,
-                        United Arab Emirates
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                  <div className="text-white/80 text-sm leading-5 transform-none">
-                    Call or WhatsApp (Available 7 AM – 9 PM, all days):
-                  </div>
-                  <div className="flex flex-wrap gap-6 transform-none">
-                    <div className="flex items-center border-b border-white rounded-full px-0 py-2.5">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133f4621a89afd0b0fc94_india-flag.svg"
-                        loading="lazy"
-                        alt=""
-                        className="mt-0.5 max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px] max-w-[370px]">
-                        +91 12345 67890
-                      </div>
-                    </div>
-                    <div className="flex items-center border-b border-white rounded-full px-0 py-2.5">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133fa19556782d9391f36_dubai-flag.svg"
-                        loading="lazy"
-                        alt=""
-                        className="mt-0.5 max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px] max-w-[370px]">
-                        +971 22 222 4567
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                  <div className="text-white/80 text-sm leading-5 transform-none">
-                    Follow us:
-                  </div>
-                  <div className="flex items-center gap-6 transform-none">
-                    <a
-                      target="_blank"
-                      href="https://www.instagram.com/"
-                      className="flex items-center gap-3"
-                    >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133f466e160c60d2305a5_instagram.svg"
-                        loading="lazy"
-                        alt=""
-                        className="max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px]">Instagram</div>
-                    </a>
-                    <a
-                      target="_blank"
-                      href="https://www.facebook.com/"
-                      className="flex items-center gap-3"
-                    >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133f38b2ddd95adc59dbe_facebook.svg"
-                        loading="lazy"
-                        alt=""
-                        className="max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px]">Facebook</div>
-                    </a>
-                    <a
-                      target="_blank"
-                      href="https://www.youtube.com/"
-                      className="flex items-center gap-3"
-                    >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685133f3070ee8e61132e1f0_youtube.svg"
-                        loading="lazy"
-                        alt=""
-                        className="max-w-full"
-                      />
-                      <div className="text-lg leading-[22.5px]">YouTube</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
 
-            <div>
-              <div className="flex flex-col gap-13.75">
-                <div className="flex flex-col gap-6">
-                  <h2 className="text-[48px] font-black leading-[43.2px] transform-none">
-                    SEND A MESSAGE
-                  </h2>
-                  <p className="text-white/80 text-sm leading-5 max-w-[400px] transform-none">
-                    We're here to support you on your fitness journey and answer
-                    any questions or concerns you may have.
+            <div
+              className={`border-b border-white/10 rounded-xl mx-auto relative text-left w-full z-[900] transform-none transition-all duration-300 ${openFAQ === 6 ? "h-auto" : "h-[90px] overflow-hidden"}`}
+            >
+              <button
+                onClick={() => toggleFAQ(6)}
+                className="flex items-center gap-2.5 h-[90px] justify-between mx-auto px-8 py-5 relative text-left align-top w-full"
+              >
+                <div className="font-bold text-xl leading-6 text-left text-white">
+                  Is this completely online? What's the cost after the free trial?
+                </div>
+                <div className="flex items-center bg-white rounded-full h-11 justify-center min-h-11 min-w-11 text-left w-11">
+                  <span className="text-black font-bold text-lg">
+                    {openFAQ === 6 ? "−" : "+"}
+                  </span>
+                </div>
+              </button>
+              {openFAQ === 6 && (
+                <div className="min-w-full pb-8 px-8 text-left">
+                  <p className="text-white/80 text-lg leading-[22.5px] max-w-[550px] text-left">
+                    Yes, everything is 100% online! No physical gym location needed.
+                    Access your personalized training, nutrition plans, recipes, and coaching
+                    from anywhere. After your 2-month free trial, continue for just $15/month
+                    - that's less than 50 cents per day for unlimited access to everything.
                   </p>
-                  <p className="text-white/80 text-sm leading-5 max-w-[400px] transform-none">
-                    Feel free to get in touch with us through the following
-                    contact options.
-                  </p>
                 </div>
-
-                <div>
-                  <form name="email-form" method="get">
-                    <div className="grid grid-cols-2 gap-x-5 mb-15 transform-none">
-                      <input
-                        className="appearance-auto border-b border-white/10 font-lg grid-col-span-2 grid-row-1 h-[61px] leading-[22.5px] overflow-clip px-3 py-7 transition-duration-300 align-middle w-full"
-                        maxLength={256}
-                        name="name"
-                        placeholder="What's your name?"
-                        type="text"
-                      />
-                      <input
-                        className="appearance-auto border-b border-white/10 font-lg h-[61px] leading-[22.5px] overflow-clip px-3 py-7 transition-duration-300 align-middle w-full"
-                        maxLength={256}
-                        name="email"
-                        placeholder="What's your email?"
-                        type="email"
-                        required
-                      />
-                      <input
-                        className="appearance-auto border-b border-white/10 font-lg h-[61px] leading-[22.5px] overflow-clip px-3 py-7 transition-duration-300 align-middle w-full"
-                        maxLength={256}
-                        name="Number"
-                        placeholder="What's your mobile number?"
-                        type="tel"
-                      />
-                      <select
-                        className="appearance-auto bg-black border-b border-white/10 font-lg grid-col-span-2 grid-row-1 h-[61px] leading-normal px-3 py-3 whitespace-pre transition-duration-300 align-middle w-full"
-                        name="Services"
-                        required
-                      >
-                        <option value="">Choose our services</option>
-                        <option value="Personal Training">
-                          Personal Training
-                        </option>
-                        <option value="Nutrition Guidance">
-                          Nutrition Guidance
-                        </option>
-                        <option value="Strength & Conditioning">
-                          Strength & Conditioning
-                        </option>
-                        <option value="Yoga & Flexibility">
-                          Yoga & Flexibility
-                        </option>
-                        <option value="Progress Tracking">
-                          Progress Tracking
-                        </option>
-                      </select>
-                      <input
-                        className="appearance-auto border-b border-white/10 font-lg grid-col-span-2 grid-row-1 h-[61px] leading-[22.5px] overflow-clip px-3 py-7 transition-duration-300 align-middle w-full"
-                        maxLength={256}
-                        name="Subject"
-                        placeholder="Subject"
-                        type="text"
-                      />
-                      <textarea
-                        className="appearance-auto border-b border-white/10 font-lg grid-col-span-2 grid-row-1 h-[100px] leading-[22.5px] overflow-wrap-break-word overflow-auto px-3 py-7 resize-both transition-duration-300 align-middle whitespace-pre-wrap word-wrap-break-word w-full"
-                        placeholder="Example Text"
-                        maxLength={5000}
-                        name="field"
-                      ></textarea>
-                    </div>
-                    <input
-                      className="appearance-button bg-white rounded-full text-black font-bold text-sm leading-5 overflow-clip px-7 py-3.5 text-center uppercase whitespace-pre select-none transform-none"
-                      type="submit"
-                      value="SEND MESSAGE"
-                    />
-                  </form>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                  <div className="text-white/80 text-sm tracking-wide leading-5 max-w-[300px] transform-none">
-                    <span>
-                      If you'd rather get started with a mail - then write to us
-                      at{" "}
-                    </span>
-                    <a
-                      href="mailto:sales@hyperfit.com"
-                      className="text-orange-500 underline inline"
-                    >
-                      sales@hyperfit.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter/App Download Section */}
-      <section className="pt-35 pb-20">
-        <div className="max-w-[1320px] mx-auto px-5">
-          <div
-            className="rounded-2xl transform-none"
-            style={{
-              backgroundImage:
-                'url("https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508e2d51a6ccda834d54_newsletter-background.webp")',
-              backgroundPosition: "50% 50%",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="grid grid-cols-2 gap-10">
-              <div className="flex-col gap-10">
-                <div className="flex flex-col gap-10 h-full px-10 py-10">
-                  <h2 className="text-[48px] font-black leading-[43.2px]">
-                    <span className="text-[48px] font-black leading-[43.2px]">
-                      DOWNLOAD OUR
-                    </span>
-                    <span className="inline text-[48px] leading-[43.2px]">
-                      HAYPERFIT APP
-                    </span>
-                  </h2>
-                  <p className="text-white/80 text-lg leading-[22.5px]">
-                    Stay connected to your fitness journey — anytime, anywhere.
-                    Our app brings convenience, clarity, and control right to
-                    your fingertips.
-                  </p>
-                  <div className="flex flex-col gap-5">
-                    <div className="flex items-center gap-2 tracking-wide">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
-                        loading="lazy"
-                        alt=""
-                        className="tracking-wide max-w-full"
-                      />
-                      <div className="text-sm font-medium tracking-wide leading-5">
-                        View class schedules instantly
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 tracking-wide">
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851550a2ca39dc68bec570a_check.svg"
-                        loading="lazy"
-                        alt=""
-                        className="tracking-wide max-w-full"
-                      />
-                      <div className="text-sm font-medium tracking-wide leading-5">
-                        Manage your membership easily
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <a
-                      target="_blank"
-                      href="https://play.google.com/store/games"
-                    >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508dee9bf67ff29689bf_play-store.svg"
-                        loading="lazy"
-                        alt=""
-                        className="inline-block max-w-full"
-                      />
-                    </a>
-                    <a
-                      target="_blank"
-                      href="https://www.apple.com/in/app-store/"
-                    >
-                      <img
-                        src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508d48475812036b4a00_app-store.svg"
-                        loading="lazy"
-                        alt=""
-                        className="inline-block max-w-full"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-col gap-10">
-                <div className="h-full pr-10 relative text-right">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6851508fced1885ded303e8e_download-app-image-p-500.webp"
-                    loading="lazy"
-                    height="590"
-                    alt=""
-                    className="absolute bottom-0 h-[590px] max-w-full right-10 text-right"
-                  />
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -2160,32 +1927,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="justify-self-center transform-none">
-                <div>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    CHANGE LOG
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    LICENSE
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    STYLE GUIDE
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-white/20 rounded-full inline-block text-sm font-medium leading-5 px-5 py-3 uppercase transition-duration-300"
-                  >
-                    404
-                  </a>
-                </div>
+                <div></div>
               </div>
               <div className="transform-none">
                 <div className="flex items-center justify-end">
@@ -2221,12 +1963,6 @@ export default function Index() {
             <div className="flex items-center flex-wrap justify-between gap-6">
               <div className="flex items-center gap-10">
                 <div className="flex items-center gap-3 transform-none">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685165e99ecee091e25ac9fe_flowcub.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full"
-                  />
                   <div className="text-sm leading-5 max-w-[170px] uppercase">
                     <span>DESIGN & Developed by </span>
                     <a
@@ -2239,12 +1975,6 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3 transform-none">
-                  <img
-                    src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/685165e93203fefeb003e7f7_webflow.svg"
-                    loading="lazy"
-                    alt=""
-                    className="max-w-full"
-                  />
                   <div className="text-sm leading-5 max-w-[170px] uppercase">
                     <span>Powered BY </span>
                     <a
@@ -2273,44 +2003,6 @@ export default function Index() {
               {/* Green dot animation placeholder */}
             </div>
           </div>
-          <a
-            target="_blank"
-            href="https://flowcub.com/webflow-templates/"
-            className="flex items-center bg-white rounded-2xl shadow-lg text-black font-medium gap-3 absolute left-0 max-w-[363px] min-h-[77px] px-3.5 py-3.5 right-0 top-0 transition-duration-800 w-full z-[9991] transform-none"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6864c21b34f35289ee768539_webflow.svg"
-              loading="lazy"
-              alt="Logo"
-              className="font-medium h-[46px] max-w-full"
-            />
-            <div className="font-medium">
-              <div className="font-medium">
-                Explore&nbsp;our premium templates
-              </div>
-              <div className="text-blue-600 font-medium mt-1 underline">
-                Premium Webflow Templates
-              </div>
-            </div>
-          </a>
-          <a
-            target="_blank"
-            href="https://flowcub.com/help-center/"
-            className="flex items-center bg-white rounded-2xl shadow-lg text-black font-medium gap-3 absolute left-0 max-w-[363px] min-h-[77px] opacity-40 px-3.5 py-3.5 right-0 top-0 transition-duration-800 w-full z-[9990] transform-scale-90 translate-y-3"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/683831da792ffd3d821f0be5/6864c21b34f35289ee76853a_flowcub.svg"
-              loading="lazy"
-              alt="Logo"
-              className="font-medium h-[46px] max-w-full"
-            />
-            <div className="font-medium">
-              <div className="font-medium">Need to customize this template</div>
-              <div className="text-blue-600 font-medium mt-1 underline">
-                Hire our Webflow team!
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
